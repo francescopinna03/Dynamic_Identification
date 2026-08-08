@@ -1,0 +1,93 @@
+{
+  "model": "cross-fitted MouseLab process audit",
+  "classification": "leave-one-game-out subject type",
+  "diagnostics": {
+    "n_density_rows": 15904,
+    "n_baseline_subjects": 71,
+    "n_games": 16,
+    "n_fold_classifications": 1136,
+    "n_selected_cells": 2272,
+    "unique_fold_keys": true,
+    "complete_fold_panel": true,
+    "complete_process_panel": true,
+    "finite_scores": true,
+    "maximum_normalization_mean_error": 3.127388801761004e-16,
+    "raw_cell_agreement": {
+      "early": 0.7147887323943662,
+      "late": 0.6619718309859155
+    },
+    "normalized_cell_agreement": {
+      "early": 0.6637323943661971,
+      "late": 0.6100352112676056
+    }
+  },
+  "results": [
+    {
+      "outcome": "normalized_lookup",
+      "look_up": "early",
+      "intercept": -0.601261163191628,
+      "slope": 0.022065686117630417,
+      "se_intercept": 0.1240512009698356,
+      "se_slope": 0.06948257044712677,
+      "t_intercept": -4.846879018429102,
+      "t_slope": 0.3175715287393037,
+      "r_squared": 0.0071521691160278955,
+      "n_games": 16,
+      "spearman_rho": 0.18543051377715697,
+      "spearman_p_value": 0.4917327471086171
+    },
+    {
+      "outcome": "macro_margin",
+      "look_up": "early",
+      "intercept": 0.03580567596710733,
+      "slope": 0.0016668426227794298,
+      "se_intercept": 0.10239354549585253,
+      "se_slope": 0.05735185699634329,
+      "t_intercept": 0.34968684592094373,
+      "t_slope": 0.029063446417885063,
+      "r_squared": 6.0330925508722544e-05,
+      "n_games": 16,
+      "spearman_rho": -0.010301695209842055,
+      "spearman_p_value": 0.9697954828115619
+    },
+    {
+      "outcome": "normalized_lookup",
+      "look_up": "late",
+      "intercept": -0.2850579221089752,
+      "slope": 0.02226500495210381,
+      "se_intercept": 0.1042323817333918,
+      "se_slope": 0.05838181130082939,
+      "t_intercept": -2.734830744231706,
+      "t_slope": 0.38136886225363664,
+      "r_squared": 0.010281913208984084,
+      "n_games": 16,
+      "spearman_rho": 0.17071380633452546,
+      "spearman_p_value": 0.5273013553176613
+    },
+    {
+      "outcome": "macro_margin",
+      "look_up": "late",
+      "intercept": 0.2735542640163785,
+      "slope": -0.05512226298580086,
+      "se_intercept": 0.09340683317131046,
+      "se_slope": 0.052318291280765164,
+      "t_intercept": 2.9286322502195654,
+      "t_slope": -1.0535944817079028,
+      "r_squared": 0.07346504474756088,
+      "n_games": 16,
+      "spearman_rho": -0.1633554526132097,
+      "spearman_p_value": 0.5455105840229947
+    }
+  ],
+  "checks": {
+    "unique_fold_keys": true,
+    "complete_fold_panel": true,
+    "complete_process_panel": true,
+    "finite_scores": true,
+    "normalization_centered": true,
+    "four_regressions": true,
+    "sixteen_games_each": true,
+    "finite_regressions": true
+  },
+  "all_pass": true
+}

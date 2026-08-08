@@ -1,0 +1,42 @@
+{
+  "release": "1.0",
+  "seed": 42,
+  "auction_contraction": {
+    "reduced_affine_diameter": 0.6591666666666661,
+    "contraction_modulus": 0.29662499999999975,
+    "certified_unique": true,
+    "critical_lambda": 6.068268015170675,
+    "maximizing_signal": 0,
+    "maximizing_bid": 0,
+    "comparison_bid": 2,
+    "coefficient_shape": [
+      3,
+      3,
+      6
+    ]
+  },
+  "wf_bures_feedback": {
+    "minimum_curvature_eigenvalue": 0.8644838555012139,
+    "relative_covariance_gap": 3.3947334402480483e-15,
+    "covariance_objective": 0.63399654355511,
+    "optimizer_success": true
+  },
+  "singular_jet": {
+    "order": 2,
+    "jet_information": 0.06253333333333334,
+    "kl_coefficient_target": 0.007816666666666668,
+    "scaled_kl_values": [
+      0.007813546052987033,
+      0.007815447031806094,
+      0.007816227462448196,
+      0.00781647126167546
+    ],
+    "last_relative_error": 2.499850633799754e-05
+  },
+  "terminal_copula_assembly": {
+    "joint_path_mass": 1.0,
+    "belief_marginal_max_error": 1.1102230246251565e-16,
+    "depth_marginal_max_error": 1.1102230246251565e-16
+  },
+  "all_checks_pass": true
+}

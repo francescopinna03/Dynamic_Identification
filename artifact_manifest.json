@@ -1,0 +1,90 @@
+{
+  "release": "1.0",
+  "artifacts": [
+    {
+      "path": "reference_outputs/empirical/crossfit_mixtures.csv",
+      "size_bytes": 1951,
+      "sha256": "d1ab0c53131e623dcc1fa46701e62ec03601336d63b42a5bd18eb8aa63ca2fe4"
+    },
+    {
+      "path": "reference_outputs/empirical/cv_results.csv",
+      "size_bytes": 5001,
+      "sha256": "1a1668ba71c65d687fa2b5e6e34eb46669b448d8781915014fe50807ed28202e"
+    },
+    {
+      "path": "reference_outputs/empirical/fisher_diagnostics.csv",
+      "size_bytes": 5298,
+      "sha256": "7e345a1e5f7ba76b8efd0b74ffc9b85bd970ea2fa3820d2b603158ec68620ac2"
+    },
+    {
+      "path": "reference_outputs/empirical/mle_pooled.json",
+      "size_bytes": 399,
+      "sha256": "18280b4508c4bac6f6f45e0dea0bd4285d8e90623fa522f455507bfe53cdb24b"
+    },
+    {
+      "path": "reference_outputs/empirical/process_tracing_crossfit.json",
+      "size_bytes": 2841,
+      "sha256": "5bc5c88b1c14903f2dcffb881c3bca356ab0fc647ea965b5295276e38b93705b"
+    },
+    {
+      "path": "reference_outputs/empirical/process_tracing_crossfit_games.csv",
+      "size_bytes": 8446,
+      "sha256": "34a55b191d7a302e4d356099c954da128198e0b514e0ced33ba75d8838a554fa"
+    },
+    {
+      "path": "reference_outputs/empirical/robustness.txt",
+      "size_bytes": 2534,
+      "sha256": "0db384a552bf99f56e8759aa4ebfd72498b5e1b2e65a09747621930196a3fd3e"
+    },
+    {
+      "path": "reference_outputs/empirical/stratified_cv_crossfit.csv",
+      "size_bytes": 3597,
+      "sha256": "a2c9b933972968a21b8379bbf6a29f35f0d87133f8037936966e8ebce5f46f21"
+    },
+    {
+      "path": "reference_outputs/empirical/subject_types_crossfit.csv",
+      "size_bytes": 574203,
+      "sha256": "02072cb3f0c98ff56b30cb2d876183a5e680a373df842fc07094ac6b28f42c7a"
+    },
+    {
+      "path": "reference_outputs/theoretical/central_path_transition.json",
+      "size_bytes": 12810,
+      "sha256": "4de9cd543bfbea5995ba5e1cb105cfb88465264814f721a2871177c811f14085"
+    },
+    {
+      "path": "reference_outputs/theoretical/conditional_wf_sbb.json",
+      "size_bytes": 2959,
+      "sha256": "166412fbbc9ea2be1772ba35b4bdae88195b5d00619aeddc975e4cc9aa4748db"
+    },
+    {
+      "path": "reference_outputs/theoretical/design_games.json",
+      "size_bytes": 17352,
+      "sha256": "ffdea93054bcd7d921fa6f7090cf164a879bd62337a109d601b2ab167fb6320f"
+    },
+    {
+      "path": "reference_outputs/theoretical/log_domain_boundary_layer.json",
+      "size_bytes": 26115,
+      "sha256": "00a0f014b98dac253a1b31ff0f16e6876e85fb15636decd61c4262f1091cbea6"
+    },
+    {
+      "path": "reference_outputs/theoretical/log_domain_information_path.csv",
+      "size_bytes": 3823,
+      "sha256": "a7ba3eab9a33d0e16c74b9dce187d7216a79f97ca6ff78c86ef6d989306b79f5"
+    },
+    {
+      "path": "reference_outputs/theoretical/math_checks.json",
+      "size_bytes": 1126,
+      "sha256": "2c8c1b917218a0cfa9ddd6e34bb85dbe1784c9cf733bc8eab692ec3d35d6d7c2"
+    },
+    {
+      "path": "reference_outputs/theoretical/robustness_wf_sbb.csv",
+      "size_bytes": 2521,
+      "sha256": "440f7d851d46bcf90776b1d6429a1704e5a016a017560a7a2d458e9d17c11694"
+    },
+    {
+      "path": "reference_outputs/theoretical/robustness_wf_sbb.json",
+      "size_bytes": 52780,
+      "sha256": "17759f3b873fa6c1dbd888bb29c09f8418baca0b4c56b4f824a1d7ac736d422f"
+    }
+  ]
+}

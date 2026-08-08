@@ -1,0 +1,45 @@
+{
+  "dataset": "Costa-Gomes and Crawford (2006)",
+  "verified_on": "2026-08-04",
+  "raw_archives": [
+    {
+      "filename": "december06_data_20041028.zip",
+      "role": "data_appendix",
+      "sha256": "9b7ebc6c30521538d97753b57f95fd32e2eb11fb1ce28b9beee54392bd95d1d3"
+    },
+    {
+      "filename": "december06_app_20041028.zip",
+      "role": "web_appendix",
+      "sha256": "7bb510689e70f20abafe5eca430884c6cac864f89a608269b59ddc1fe1cbd2a5"
+    }
+  ],
+  "raw_required": [
+    {"filename": "SubjectsGuesses.xls", "size_bytes": 6415},
+    {"filename": "TypesGuesses.xls", "size_bytes": 493},
+    {"filename": "OpponentsGuesses.xls", "size_bytes": 459},
+    {"filename": "DominanceRounds.xls", "size_bytes": 762}
+  ],
+  "processed": [
+    {
+      "filename": "games.csv",
+      "shape": [16, 31],
+      "sha256": "c53d11b8626873898ec2576f4935a4b0193e7e796a74d6f044edd06b93f67e09"
+    },
+    {
+      "filename": "choices.csv",
+      "shape": [1408, 7],
+      "sha256": "4e2f16253d666b568f2cf46215d80ae0d909b4116e707f447afe723b83037f0c"
+    },
+    {
+      "filename": "compliance_density_long.csv",
+      "shape": [15904, 5],
+      "sha256": "793b18502ce25874fb12f9790bdb71e6a5e80d81414da3dcbb62e2a7f15ff6af"
+    },
+    {
+      "filename": "compliance_counts_long.csv",
+      "shape": [994, 12],
+      "sha256": "84345e243495845083c5bedb519770188a50c002df89078c4d35874e80659740"
+    }
+  ],
+  "verification": "Raw-to-processed regeneration passed with byte-identical CSV files."
+}

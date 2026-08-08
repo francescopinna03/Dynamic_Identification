@@ -1,0 +1,389 @@
+{
+  "result": "the apparent positive-entropy face transition is a numerical-floor artifact",
+  "config": {
+    "entropy_epsilon": 0.0005,
+    "chi": 0.45,
+    "seed": 42,
+    "old_numerical_floor": 1e-12
+  },
+  "central_solution": {
+    "objective": 0.15145675402694453,
+    "minimum_flow": 9.182735993109279e-17,
+    "equality_residual": 3.3306690738754696e-16,
+    "cone_residual": -1.0751652809296882e-05,
+    "reduced_gradient_residual": 5.052382123782451e-16,
+    "positive_flow_count": 152,
+    "flow_count": 152
+  },
+  "homotopy": {
+    "initialization": {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "solver": "SLSQP with projected-Newton active-face refinement",
+      "iterations": 105,
+      "objective": 0.15186101917238395,
+      "equality_residual": 1.1102230246251565e-16,
+      "cone_residual": -1.1550537147930484e-05,
+      "reduced_gradient_residual": 4.429405106587403e-11,
+      "stationarity_residual": 1.1922918208284727e-10,
+      "minimum_flow": 1.970993012750265e-06,
+      "active_bounds": [],
+      "active_cones": [],
+      "minimum_active_multiplier": null,
+      "reduced_hessian_min_eigenvalue": 0.0779995371697174
+    },
+    "homotopy": [
+      {
+        "entropy_epsilon": 0.002337847931620509,
+        "minimum_flow": 1.3263878423284282e-06,
+        "objective": 0.15182985059523144,
+        "success": true,
+        "iterations": 3,
+        "accepted_steps": 3,
+        "reduced_gradient_residual": 5.900076156806211e-09
+      },
+      {
+        "entropy_epsilon": 0.0021862131805529196,
+        "minimum_flow": 8.665486933577082e-07,
+        "objective": 0.15180049594409764,
+        "success": true,
+        "iterations": 3,
+        "accepted_steps": 3,
+        "reduced_gradient_residual": 1.0997322000532578e-08
+      },
+      {
+        "entropy_epsilon": 0.0020444135848948558,
+        "minimum_flow": 5.484851933662158e-07,
+        "objective": 0.15177285568874094,
+        "success": true,
+        "iterations": 4,
+        "accepted_steps": 4,
+        "reduced_gradient_residual": 5.486834944723462e-13
+      },
+      {
+        "entropy_epsilon": 0.001911811228329324,
+        "minimum_flow": 3.355846008788495e-07,
+        "objective": 0.15174683528806013,
+        "success": true,
+        "iterations": 4,
+        "accepted_steps": 4,
+        "reduced_gradient_residual": 2.090531307091803e-12
+      },
+      {
+        "entropy_epsilon": 0.001787809570319432,
+        "minimum_flow": 1.9801686952126261e-07,
+        "objective": 0.15172234493196965,
+        "success": true,
+        "iterations": 4,
+        "accepted_steps": 4,
+        "reduced_gradient_residual": 8.059994078407628e-12
+      },
+      {
+        "entropy_epsilon": 0.0016718507624410546,
+        "minimum_flow": 1.1240601057185386e-07,
+        "objective": 0.1516992993076124,
+        "success": true,
+        "iterations": 4,
+        "accepted_steps": 4,
+        "reduced_gradient_residual": 3.162186268043654e-11
+      },
+      {
+        "entropy_epsilon": 0.0015634131387803967,
+        "minimum_flow": 6.122369362068366e-08,
+        "objective": 0.15167761739073324,
+        "success": true,
+        "iterations": 4,
+        "accepted_steps": 4,
+        "reduced_gradient_residual": 1.2691714693091605e-10
+      },
+      {
+        "entropy_epsilon": 0.0014620088691064332,
+        "minimum_flow": 3.19059919717698e-08,
+        "objective": 0.15165722226036285,
+        "success": true,
+        "iterations": 4,
+        "accepted_steps": 4,
+        "reduced_gradient_residual": 5.249754706469767e-10
+      },
+      {
+        "entropy_epsilon": 0.001367181764260526,
+        "minimum_flow": 1.586150632978875e-08,
+        "objective": 0.15163804093299188,
+        "success": true,
+        "iterations": 4,
+        "accepted_steps": 4,
+        "reduced_gradient_residual": 2.2612767552540602e-09
+      },
+      {
+        "entropy_epsilon": 0.0012785052238903,
+        "minimum_flow": 7.497844868106199e-09,
+        "objective": 0.15162000421135774,
+        "success": true,
+        "iterations": 4,
+        "accepted_steps": 4,
+        "reduced_gradient_residual": 1.0302066725739745e-08
+      },
+      {
+        "entropy_epsilon": 0.001195580317295183,
+        "minimum_flow": 3.3589482852049145e-09,
+        "objective": 0.15160304654284665,
+        "success": true,
+        "iterations": 5,
+        "accepted_steps": 5,
+        "reduced_gradient_residual": 5.38778917313909e-12
+      },
+      {
+        "entropy_epsilon": 0.0011180339887498947,
+        "minimum_flow": 1.4207054550858496e-09,
+        "objective": 0.15158710588313104,
+        "success": true,
+        "iterations": 5,
+        "accepted_steps": 5,
+        "reduced_gradient_residual": 1.841810575581304e-10
+      },
+      {
+        "entropy_epsilon": 0.0010455173792321478,
+        "minimum_flow": 5.651075233120065e-10,
+        "objective": 0.1515721235617268,
+        "success": true,
+        "iterations": 5,
+        "accepted_steps": 5,
+        "reduced_gradient_residual": 1.0461461673934996e-08
+      },
+      {
+        "entropy_epsilon": 0.00097770425700447,
+        "minimum_flow": 2.105347737432197e-10,
+        "objective": 0.15155804414735594,
+        "success": true,
+        "iterations": 7,
+        "accepted_steps": 7,
+        "reduced_gradient_residual": 2.6133778301129507e-12
+      },
+      {
+        "entropy_epsilon": 0.000914289549989787,
+        "minimum_flow": 7.312409728366573e-11,
+        "objective": 0.15154481531206054,
+        "success": true,
+        "iterations": 7,
+        "accepted_steps": 7,
+        "reduced_gradient_residual": 1.0733910127923296e-09
+      },
+      {
+        "entropy_epsilon": 0.000854987973338348,
+        "minimum_flow": 2.3565496954443752e-11,
+        "objective": 0.15153238769375071,
+        "success": true,
+        "iterations": 7,
+        "accepted_steps": 7,
+        "reduced_gradient_residual": 6.942969302779767e-10
+      },
+      {
+        "entropy_epsilon": 0.0007995327460117882,
+        "minimum_flow": 7.010180072368011e-12,
+        "objective": 0.151520714757202,
+        "success": true,
+        "iterations": 7,
+        "accepted_steps": 7,
+        "reduced_gradient_residual": 4.313154000623598e-10
+      },
+      {
+        "entropy_epsilon": 0.0007476743906106101,
+        "minimum_flow": 1.9143542245242833e-12,
+        "objective": 0.15150975265346867,
+        "success": true,
+        "iterations": 7,
+        "accepted_steps": 7,
+        "reduced_gradient_residual": 2.5586011000861e-10
+      },
+      {
+        "entropy_epsilon": 0.0006991796110458567,
+        "minimum_flow": 4.770827574652e-13,
+        "objective": 0.15149946007739773,
+        "success": true,
+        "iterations": 7,
+        "accepted_steps": 7,
+        "reduced_gradient_residual": 1.439376630038569e-10
+      },
+      {
+        "entropy_epsilon": 0.0006538302430059154,
+        "minimum_flow": 1.0782132989957524e-13,
+        "objective": 0.15148979812267352,
+        "success": true,
+        "iterations": 7,
+        "accepted_steps": 7,
+        "reduced_gradient_residual": 7.616081073094638e-11
+      },
+      {
+        "entropy_epsilon": 0.0006114222724969259,
+        "minimum_flow": 2.1949735313297233e-14,
+        "objective": 0.1514807301339861,
+        "success": true,
+        "iterations": 7,
+        "accepted_steps": 7,
+        "reduced_gradient_residual": 3.75291230383934e-11
+      },
+      {
+        "entropy_epsilon": 0.0005717649180414604,
+        "minimum_flow": 3.996162004618689e-15,
+        "objective": 0.15147222155685375,
+        "success": true,
+        "iterations": 7,
+        "accepted_steps": 7,
+        "reduced_gradient_residual": 1.7016550495074778e-11
+      },
+      {
+        "entropy_epsilon": 0.0005346797724065594,
+        "minimum_flow": 6.456701428399233e-16,
+        "objective": 0.15146423978744764,
+        "success": true,
+        "iterations": 7,
+        "accepted_steps": 7,
+        "reduced_gradient_residual": 6.993225876855691e-12
+      },
+      {
+        "entropy_epsilon": 0.0005,
+        "minimum_flow": 9.182735993109279e-17,
+        "objective": 0.15145675402694453,
+        "success": true,
+        "iterations": 8,
+        "accepted_steps": 8,
+        "reduced_gradient_residual": 5.052382123782451e-16
+      }
+    ],
+    "final": {
+      "success": true,
+      "iterations": 0,
+      "accepted_steps": 0,
+      "reduced_gradient_residual": 5.052382123782451e-16
+    }
+  },
+  "local_entropy_neighborhood": [
+    {
+      "entropy_epsilon": 0.00045000000000000004,
+      "minimum_flow": 3.243552556886837e-18,
+      "equality_residual": 2.7755575615628914e-16,
+      "cone_residual": -1.0728119512853125e-05,
+      "success": true,
+      "iterations": 9,
+      "accepted_steps": 9,
+      "reduced_gradient_residual": 1.0503750647039567e-15
+    },
+    {
+      "entropy_epsilon": 0.000475,
+      "minimum_flow": 1.885083012194638e-17,
+      "equality_residual": 3.3306690738754696e-16,
+      "cone_residual": -1.0739905492383384e-05,
+      "success": true,
+      "iterations": 8,
+      "accepted_steps": 8,
+      "reduced_gradient_residual": 3.707971429900425e-16
+    },
+    {
+      "entropy_epsilon": 0.0005,
+      "minimum_flow": 9.182735993109279e-17,
+      "equality_residual": 3.3306690738754696e-16,
+      "cone_residual": -1.0751652809296882e-05,
+      "success": true,
+      "iterations": 0,
+      "accepted_steps": 0,
+      "reduced_gradient_residual": 5.052382123782451e-16
+    },
+    {
+      "entropy_epsilon": 0.0005250000000000001,
+      "minimum_flow": 3.8449496702625403e-16,
+      "equality_residual": 3.3306690738754696e-16,
+      "cone_residual": -1.076336620078877e-05,
+      "success": true,
+      "iterations": 5,
+      "accepted_steps": 5,
+      "reduced_gradient_residual": 1.25580969234651e-14
+    },
+    {
+      "entropy_epsilon": 0.00055,
+      "minimum_flow": 1.4126811362858035e-15,
+      "equality_residual": 3.0531133177191805e-16,
+      "cone_residual": -1.0775049432679607e-05,
+      "success": true,
+      "iterations": 6,
+      "accepted_steps": 6,
+      "reduced_gradient_residual": 1.0454311027974228e-14
+    }
+  ],
+  "chi_derivative": {
+    "kkt_condition_number": 7779037437074407.0,
+    "reduced_hessian_condition_number": 37353522395800.87,
+    "reduced_hessian_min_eigenvalue": 0.07105283748165361,
+    "constraint_derivative_residual": 4.98732999343332e-16,
+    "finite_reoptimization_relative_error": 1.6692784525225735e-09,
+    "plus_reoptimization": {
+      "success": true,
+      "iterations": 2,
+      "accepted_steps": 2,
+      "reduced_gradient_residual": 9.695109298712978e-14
+    },
+    "minus_reoptimization": {
+      "success": true,
+      "iterations": 2,
+      "accepted_steps": 2,
+      "reduced_gradient_residual": 7.807730156850212e-14
+    }
+  },
+  "entropy_derivative": {
+    "kkt_condition_number": 7779037437074407.0,
+    "reduced_hessian_condition_number": 37353522395800.87,
+    "reduced_hessian_min_eigenvalue": 0.07105283748165361,
+    "constraint_derivative_residual": 2.6645352591003757e-15,
+    "finite_reoptimization_relative_error": 8.881261617630124e-07,
+    "derivative_norm": 10.452912966385599,
+    "plus_reoptimization": {
+      "success": true,
+      "iterations": 3,
+      "accepted_steps": 3,
+      "reduced_gradient_residual": 5.88938620094126e-16
+    },
+    "minus_reoptimization": {
+      "success": true,
+      "iterations": 3,
+      "accepted_steps": 3,
+      "reduced_gradient_residual": 5.004677228193088e-16
+    }
+  },
+  "zero_temperature_face": {
+    "active_bounds": 22,
+    "minimum_active_multiplier": 0.0006081249157854351,
+    "maximum_active_multiplier": 0.015064155572662052,
+    "scaled_log_multiplier_correlation": 0.9972006326251122,
+    "scaled_log_multiplier_mean_absolute_error": 0.0004224131075253896
+  },
+  "old_floor_diagnostic": {
+    "reported_success": false,
+    "apparent_active_bounds": 7,
+    "minimum_candidate_multiplier": -0.003605088795223421,
+    "objective_gap_from_central_solution": 5.481504139481785e-12
+  },
+  "information": {
+    "score_mean": -7.165898733771381e-19,
+    "process_fisher": 0.0662038448684762,
+    "transition_fisher_sum": 0.06620384486847622,
+    "martingale_difference_decomposition_error": 1.3877787807814457e-17,
+    "maximum_conditional_score_mean": 3.528676561919078e-17,
+    "endpoint_fisher": 0.0
+  },
+  "checks": {
+    "positive_interior_flow": true,
+    "old_floor_crossed": true,
+    "exact_flow_equalities": true,
+    "strict_cone_slack": true,
+    "central_kkt": true,
+    "positive_reduced_hessian": true,
+    "chi_derivative": true,
+    "entropy_derivative": true,
+    "stable_positive_neighborhood": true,
+    "score_centered": true,
+    "process_information_positive": true,
+    "zero_face_strict_complementarity": true,
+    "exponential_boundary_layer": true,
+    "floor_objective_gap_small": true
+  },
+  "all_pass": true
+}

@@ -1,0 +1,63 @@
+Compute delta_{j,s} for each (game, subject)... OK (1408 rows)
+
+================================================================================
+1. PERMUTATION TEST (n_perm = 2000)
+================================================================================
+  Observed beta (HARD): +0.0799
+  Observed beta (SOFT): +0.0872
+    500/2000 permutations completed
+    1000/2000 permutations completed
+    1500/2000 permutations completed
+    2000/2000 permutations completed
+
+  Results:
+    Observed beta HARD: +0.0799
+    Null mean HARD:      -0.0007 +/- 0.0228
+    p-value (2-sided):   0.0010
+    p-value (1-sided):   0.0005
+
+    Observed beta SOFT: +0.0872
+    Null mean SOFT:      -0.0004 +/- 0.0197
+    p-value (2-sided):   0.0005
+    p-value (1-sided):   0.0005
+
+================================================================================
+2. RANK CORRELATIONS (Spearman, Kendall)
+================================================================================
+
+  Continuous log(I_tau|lambda), primary analysis:
+    Spearman rho HARD: +0.543  (p = 0.0297)
+    Spearman rho SOFT: +0.593  (p = 0.0155)
+
+  Categorical info_rank (strong=3, medium=2, weak=1, degenerate=0):
+    Spearman rho HARD: +0.488  (p = 0.0554)
+    Spearman rho SOFT: +0.544  (p = 0.0294)
+    Kendall tau HARD:  +0.421  (p = 0.0382)
+    Kendall tau SOFT:  +0.460  (p = 0.0235)
+
+  Continuous -se_tau (high info = low se_tau):
+    Spearman rho HARD: +0.543  (p = 0.0297)
+    Spearman rho SOFT: +0.593  (p = 0.0155)
+
+================================================================================
+3. LEAVE-OUT GAME 4 (degenerate with a large positive Delta)
+================================================================================
+
+  Without game 4, n games = 15:
+    Beta HARD = +0.0896 (SE = 0.0304, t = +2.95, R^2 = 0.401)
+    Beta SOFT = +0.0956 (SE = 0.0340, t = +2.81, R^2 = 0.378)
+
+  Symmetric check: leave out game 10 (strong outlier)
+    Beta HARD = +0.0711 (SE = 0.0314, t = +2.26, R^2 = 0.283)
+    Beta SOFT = +0.0807 (SE = 0.0349, t = +2.31, R^2 = 0.291)
+
+================================================================================
+ROBUSTNESS SUMMARY
+================================================================================
+
+  Baseline (OLS, n=16):  beta_HARD = +0.0799
+  Permutation p-value (1-sided):     0.0005
+  Spearman rho (categorical):        +0.488  (p = 0.0554)
+  Spearman rho (continuous -se_tau): +0.543  (p = 0.0297)
+  Leave-out game 4:  beta = +0.0896 (t = +2.95)
+  Leave-out game 10: beta = +0.0711 (t = +2.26)

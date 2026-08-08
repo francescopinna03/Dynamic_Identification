@@ -1,0 +1,12 @@
+{
+  "release": "1.0",
+  "python": "3.14.0",
+  "platform": "macOS arm64",
+  "packages": {
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "python-dateutil": "2.9.0.post0",
+    "scipy": "1.18.0",
+    "six": "1.17.0"
+  }
+}

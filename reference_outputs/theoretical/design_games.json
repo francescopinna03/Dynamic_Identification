@@ -1,0 +1,782 @@
+{
+  "release": "1.0",
+  "seed": 42,
+  "parameter_order": [
+    "lambda",
+    "chi",
+    "tau"
+  ],
+  "local_parameter_point": [
+    1.8,
+    0.2,
+    2.5
+  ],
+  "payoff_normalization": "divide each payoff array by its span",
+  "grid": {
+    "objective": 746.7874852219312,
+    "design": {
+      "G2": {
+        "pi": 0.9,
+        "t": 0.95
+      },
+      "G3": {
+        "actions": 5,
+        "target": 0.4
+      },
+      "G4": {
+        "values": 3,
+        "bids": 3,
+        "sigma": 0.05
+      }
+    },
+    "games": {
+      "G2": {
+        "fisher": [
+          [
+            0.07450085208837635,
+            -0.03401558171931039,
+            0.018723153900875308
+          ],
+          [
+            -0.03401558171931039,
+            0.13547498676904485,
+            -0.00788625746145918
+          ],
+          [
+            0.018723153900875308,
+            -0.00788625746145918,
+            0.0047090601126804224
+          ]
+        ],
+        "eigenvalues": [
+          -2.8872127224055695e-18,
+          0.06250474201073179,
+          0.15218015695936984
+        ],
+        "rank": 2
+      },
+      "G3": {
+        "fisher": [
+          [
+            0.0345212786502791,
+            0.0,
+            0.008736624750036967
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.008736624750036967,
+            0.0,
+            0.002245253735332694
+          ]
+        ],
+        "eigenvalues": [
+          0.0,
+          3.213385443182103e-05,
+          0.03673439853117997
+        ],
+        "rank": 2
+      },
+      "G4": {
+        "fisher": [
+          [
+            0.02749315201067401,
+            4.431769670835995e-05,
+            0.0
+          ],
+          [
+            4.431769670835995e-05,
+            7.194260032365376e-07,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "eigenvalues": [
+          0.0,
+          6.479862304247219e-07,
+          0.02749322345044682
+        ],
+        "rank": 2
+      }
+    },
+    "battery": {
+      "fisher": [
+        [
+          0.13651528274932945,
+          -0.03397126402260203,
+          0.027459778650912273
+        ],
+        [
+          -0.03397126402260203,
+          0.1354757061950481,
+          -0.00788625746145918
+        ],
+        [
+          0.027459778650912273,
+          -0.00788625746145918,
+          0.0069543138480131165
+        ]
+      ],
+      "eigenvalues": [
+        0.0013672456769078269,
+        0.10377223132607995,
+        0.17380582578940285
+      ],
+      "rank": 3,
+      "inverse": [
+        [
+          35.68327686662063,
+          0.7985399108610417,
+          -139.99330692336676
+        ],
+        [
+          0.7985399108610416,
+          7.92097082219201,
+          5.829343762495132
+        ],
+        [
+          -139.99330692336676,
+          5.829343762495132,
+          703.1832375331186
+        ]
+      ],
+      "trace_inverse": 746.7874852219312,
+      "standard_errors": [
+        5.973548096953822,
+        2.8144219339310177,
+        26.517602409213367
+      ]
+    },
+    "sample_size": [
+      {
+        "delta": 0.2,
+        "average_mse": 6224,
+        "all_standard_errors": 17580
+      },
+      {
+        "delta": 0.1,
+        "average_mse": 24893,
+        "all_standard_errors": 70319
+      },
+      {
+        "delta": 0.05,
+        "average_mse": 99572,
+        "all_standard_errors": 281274
+      }
+    ]
+  },
+  "refined": {
+    "success": true,
+    "message": "Optimization terminated successfully.",
+    "evaluations": 1898,
+    "objective": 706.1388810318568,
+    "design": {
+      "G2": {
+        "pi": 0.95,
+        "t": 0.97
+      },
+      "G3": {
+        "actions": 5,
+        "target": 0.3
+      },
+      "G4": {
+        "values": 3,
+        "bids": 3,
+        "sigma": 0.03
+      }
+    },
+    "games": {
+      "G2": {
+        "fisher": [
+          [
+            0.08049539313229453,
+            -0.015280467570761201,
+            0.020753940115029738
+          ],
+          [
+            -0.015280467570761201,
+            0.07318482523943533,
+            -0.0038489250232201064
+          ],
+          [
+            0.020753940115029738,
+            -0.0038489250232201064,
+            0.005351057451933639
+          ]
+        ],
+        "eigenvalues": [
+          -1.463672932855431e-18,
+          0.06253398136307957,
+          0.09649729446058394
+        ],
+        "rank": 2
+      },
+      "G3": {
+        "fisher": [
+          [
+            0.039806314335226425,
+            0.0,
+            0.00993029776620355
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.00993029776620355,
+            0.0,
+            0.002531375768077965
+          ]
+        ],
+        "eigenvalues": [
+          0.0,
+          5.093618212536092e-05,
+          0.04228675392117903
+        ],
+        "rank": 2
+      },
+      "G4": {
+        "fisher": [
+          [
+            0.02786693716279151,
+            2.8374987254106465e-05,
+            0.0
+          ],
+          [
+            2.8374987254106465e-05,
+            3.075483040360637e-07,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "eigenvalues": [
+          0.0,
+          2.7865571537258057e-07,
+          0.027866966055380173
+        ],
+        "rank": 2
+      }
+    },
+    "battery": {
+      "fisher": [
+        [
+          0.14816864463031248,
+          -0.015252092583507095,
+          0.030684237881233287
+        ],
+        [
+          -0.015252092583507095,
+          0.07318513278773936,
+          -0.0038489250232201064
+        ],
+        [
+          0.030684237881233287,
+          -0.0038489250232201064,
+          0.007882433220011604
+        ]
+      ],
+      "eigenvalues": [
+        0.0014586661840502644,
+        0.07026173305891123,
+        0.157515811395102
+      ],
+      "rank": 3,
+      "inverse": [
+        [
+          34.8165581843871,
+          0.1314624615460636,
+          -135.4675053467948
+        ],
+        [
+          0.13146246154606353,
+          14.024613706004311,
+          6.336350692410972
+        ],
+        [
+          -135.46750534679478,
+          6.336350692410972,
+          657.2977091414655
+        ]
+      ],
+      "trace_inverse": 706.1388810318568,
+      "standard_errors": [
+        5.900555752163274,
+        3.744945087181428,
+        25.63781794813017
+      ]
+    },
+    "sample_size": [
+      {
+        "delta": 0.2,
+        "average_mse": 5885,
+        "all_standard_errors": 16433
+      },
+      {
+        "delta": 0.1,
+        "average_mse": 23538,
+        "all_standard_errors": 65730
+      },
+      {
+        "delta": 0.05,
+        "average_mse": 94152,
+        "all_standard_errors": 262920
+      }
+    ],
+    "branch_audit": {
+      "distinct_fixed_points": 1,
+      "diagnostics": [
+        {
+          "start": "uniform",
+          "residual": 8.087008840362842e-11,
+          "iterations": 36
+        },
+        {
+          "start": "low",
+          "residual": 8.028483433619726e-11,
+          "iterations": 38
+        },
+        {
+          "start": "high",
+          "residual": 6.183709100326951e-11,
+          "iterations": 39
+        },
+        {
+          "start": "signal",
+          "residual": 6.061251500710796e-11,
+          "iterations": 37
+        }
+      ],
+      "max_pairwise_gap": 0.0
+    }
+  },
+  "parameter_landscape": [
+    {
+      "lambda": 0.8,
+      "chi": 0.2,
+      "tau": 0.75,
+      "trace_inverse": 332.9377197544255,
+      "minimum_eigenvalue": 0.0046227755609409855
+    },
+    {
+      "lambda": 0.8,
+      "chi": 0.2,
+      "tau": 1.5,
+      "trace_inverse": 783.6145152106984,
+      "minimum_eigenvalue": 0.0014706564193106024
+    },
+    {
+      "lambda": 0.8,
+      "chi": 0.2,
+      "tau": 2.5,
+      "trace_inverse": 6191.765668268006,
+      "minimum_eigenvalue": 0.00016347306139933955
+    },
+    {
+      "lambda": 0.8,
+      "chi": 0.2,
+      "tau": 3.5,
+      "trace_inverse": 45885.82333329408,
+      "minimum_eigenvalue": 2.1824981614757072e-05
+    },
+    {
+      "lambda": 1.2,
+      "chi": 0.2,
+      "tau": 0.75,
+      "trace_inverse": 163.25324332895312,
+      "minimum_eigenvalue": 0.01037684650865301
+    },
+    {
+      "lambda": 1.2,
+      "chi": 0.2,
+      "tau": 1.5,
+      "trace_inverse": 317.22854861484876,
+      "minimum_eigenvalue": 0.0037440472014913344
+    },
+    {
+      "lambda": 1.2,
+      "chi": 0.2,
+      "tau": 2.5,
+      "trace_inverse": 2237.994051791954,
+      "minimum_eigenvalue": 0.00045419671855887123
+    },
+    {
+      "lambda": 1.2,
+      "chi": 0.2,
+      "tau": 3.5,
+      "trace_inverse": 15958.855801275351,
+      "minimum_eigenvalue": 6.278883277267246e-05
+    },
+    {
+      "lambda": 1.8,
+      "chi": 0.2,
+      "tau": 0.75,
+      "trace_inverse": 90.04544856348673,
+      "minimum_eigenvalue": 0.022944651848533174
+    },
+    {
+      "lambda": 1.8,
+      "chi": 0.2,
+      "tau": 1.5,
+      "trace_inverse": 130.624311723215,
+      "minimum_eigenvalue": 0.009658372671676393
+    },
+    {
+      "lambda": 1.8,
+      "chi": 0.2,
+      "tau": 2.5,
+      "trace_inverse": 706.1388810318568,
+      "minimum_eigenvalue": 0.0014586661840502644
+    },
+    {
+      "lambda": 1.8,
+      "chi": 0.2,
+      "tau": 3.5,
+      "trace_inverse": 4806.656828361296,
+      "minimum_eigenvalue": 0.00020884015667708525
+    },
+    {
+      "lambda": 2.5,
+      "chi": 0.2,
+      "tau": 0.75,
+      "trace_inverse": 64.34077519264044,
+      "minimum_eigenvalue": 0.026082450442524906
+    },
+    {
+      "lambda": 2.5,
+      "chi": 0.2,
+      "tau": 1.5,
+      "trace_inverse": 73.1601932549394,
+      "minimum_eigenvalue": 0.0182124330185151
+    },
+    {
+      "lambda": 2.5,
+      "chi": 0.2,
+      "tau": 2.5,
+      "trace_inverse": 251.28687415745037,
+      "minimum_eigenvalue": 0.004261879081061633
+    },
+    {
+      "lambda": 2.5,
+      "chi": 0.2,
+      "tau": 3.5,
+      "trace_inverse": 1524.3086178137805,
+      "minimum_eigenvalue": 0.0006625122416955729
+    },
+    {
+      "lambda": 3.5,
+      "chi": 0.2,
+      "tau": 0.75,
+      "trace_inverse": 55.27754825784079,
+      "minimum_eigenvalue": 0.024332137636730453
+    },
+    {
+      "lambda": 3.5,
+      "chi": 0.2,
+      "tau": 1.5,
+      "trace_inverse": 54.340397241604826,
+      "minimum_eigenvalue": 0.023803986860663564
+    },
+    {
+      "lambda": 3.5,
+      "chi": 0.2,
+      "tau": 2.5,
+      "trace_inverse": 100.47662582609678,
+      "minimum_eigenvalue": 0.012065648408181823
+    },
+    {
+      "lambda": 3.5,
+      "chi": 0.2,
+      "tau": 3.5,
+      "trace_inverse": 405.3629707981144,
+      "minimum_eigenvalue": 0.002578487737230622
+    }
+  ],
+  "chi_landscape": [
+    {
+      "lambda": 1.8,
+      "chi": 0.0,
+      "tau": 2.5,
+      "trace_inverse": 688.6932607099989,
+      "minimum_eigenvalue": 0.0014999270623731826
+    },
+    {
+      "lambda": 1.8,
+      "chi": 0.1,
+      "tau": 2.5,
+      "trace_inverse": 697.0756455479003,
+      "minimum_eigenvalue": 0.0014792917029434615
+    },
+    {
+      "lambda": 1.8,
+      "chi": 0.2,
+      "tau": 2.5,
+      "trace_inverse": 706.1388810318568,
+      "minimum_eigenvalue": 0.0014586661840502644
+    },
+    {
+      "lambda": 1.8,
+      "chi": 0.4,
+      "tau": 2.5,
+      "trace_inverse": 725.1689972404023,
+      "minimum_eigenvalue": 0.0014196391127469178
+    },
+    {
+      "lambda": 1.8,
+      "chi": 0.6,
+      "tau": 2.5,
+      "trace_inverse": 743.6237906516415,
+      "minimum_eigenvalue": 0.0013868587641415147
+    },
+    {
+      "lambda": 1.8,
+      "chi": 0.8,
+      "tau": 2.5,
+      "trace_inverse": 759.4095650176162,
+      "minimum_eigenvalue": 0.001364202498042025
+    }
+  ],
+  "battery_progression": [
+    {
+      "games": [
+        "G2"
+      ],
+      "rank": 2,
+      "minimum_eigenvalue": -1.463672932855431e-18,
+      "trace_inverse": null
+    },
+    {
+      "games": [
+        "G3"
+      ],
+      "rank": 2,
+      "minimum_eigenvalue": 0.0,
+      "trace_inverse": null
+    },
+    {
+      "games": [
+        "G4"
+      ],
+      "rank": 2,
+      "minimum_eigenvalue": 0.0,
+      "trace_inverse": null
+    },
+    {
+      "games": [
+        "G2",
+        "G3"
+      ],
+      "rank": 3,
+      "minimum_eigenvalue": 5.262920587706041e-05,
+      "trace_inverse": 19022.90916373209
+    },
+    {
+      "games": [
+        "G2",
+        "G4"
+      ],
+      "rank": 3,
+      "minimum_eigenvalue": 0.001315912920571212,
+      "trace_inverse": 783.1858199469505
+    },
+    {
+      "games": [
+        "G3",
+        "G4"
+      ],
+      "rank": 3,
+      "minimum_eigenvalue": 2.7950759181515337e-07,
+      "trace_inverse": 3578686.0717301173
+    },
+    {
+      "games": [
+        "G2",
+        "G3",
+        "G4"
+      ],
+      "rank": 3,
+      "minimum_eigenvalue": 0.0014586661840502644,
+      "trace_inverse": 706.1388810318568
+    }
+  ],
+  "primitive_slices": {
+    "G2_pi": [
+      {
+        "pi": 0.55,
+        "trace_inverse": 961.1405667626243,
+        "minimum_eigenvalue": 0.001062359098334135
+      },
+      {
+        "pi": 0.65,
+        "trace_inverse": 890.8759441547265,
+        "minimum_eigenvalue": 0.0011451498018300668
+      },
+      {
+        "pi": 0.75,
+        "trace_inverse": 809.2801753855852,
+        "minimum_eigenvalue": 0.0012589647778000405
+      },
+      {
+        "pi": 0.85,
+        "trace_inverse": 745.0398014385369,
+        "minimum_eigenvalue": 0.0013671325807479392
+      },
+      {
+        "pi": 0.95,
+        "trace_inverse": 706.1388810318568,
+        "minimum_eigenvalue": 0.0014586661840502644
+      }
+    ],
+    "G2_t": [
+      {
+        "t": 0.55,
+        "trace_inverse": 8932.77918894719,
+        "minimum_eigenvalue": 0.00012212371870713536
+      },
+      {
+        "t": 0.65,
+        "trace_inverse": 1567.6939080128705,
+        "minimum_eigenvalue": 0.0011753887044547873
+      },
+      {
+        "t": 0.75,
+        "trace_inverse": 973.171812994093,
+        "minimum_eigenvalue": 0.001360921045634332
+      },
+      {
+        "t": 0.85,
+        "trace_inverse": 802.1746235544645,
+        "minimum_eigenvalue": 0.0013882013301758373
+      },
+      {
+        "t": 0.97,
+        "trace_inverse": 706.1388810318568,
+        "minimum_eigenvalue": 0.0014586661840502644
+      }
+    ],
+    "G3_target": [
+      {
+        "target": 0.3,
+        "trace_inverse": 706.1388810318568,
+        "minimum_eigenvalue": 0.0014586661840502644
+      },
+      {
+        "target": 0.4,
+        "trace_inverse": 714.7188789742663,
+        "minimum_eigenvalue": 0.0014411836660343314
+      },
+      {
+        "target": 0.5,
+        "trace_inverse": 720.6401667814582,
+        "minimum_eigenvalue": 0.0014296126335240772
+      },
+      {
+        "target": 0.6,
+        "trace_inverse": 727.176678942808,
+        "minimum_eigenvalue": 0.0014170599126424668
+      },
+      {
+        "target": 0.75,
+        "trace_inverse": 744.3704727262192,
+        "minimum_eigenvalue": 0.0013843733716275858
+      },
+      {
+        "target": 0.9,
+        "trace_inverse": 770.1406303684493,
+        "minimum_eigenvalue": 0.0013374434024612993
+      }
+    ],
+    "G4_sigma": [
+      {
+        "sigma": 0.03,
+        "trace_inverse": 706.1388810318568,
+        "minimum_eigenvalue": 0.0014586661840502644
+      },
+      {
+        "sigma": 0.05,
+        "trace_inverse": 713.5753726256289,
+        "minimum_eigenvalue": 0.0014430454959782689
+      },
+      {
+        "sigma": 0.1,
+        "trace_inverse": 730.6916690705442,
+        "minimum_eigenvalue": 0.0014083306987694617
+      },
+      {
+        "sigma": 0.2,
+        "trace_inverse": 759.0045507897574,
+        "minimum_eigenvalue": 0.0013544299537083812
+      },
+      {
+        "sigma": 0.4,
+        "trace_inverse": 795.4767039534987,
+        "minimum_eigenvalue": 0.0012907890766628407
+      },
+      {
+        "sigma": 0.65,
+        "trace_inverse": 811.4804672370178,
+        "minimum_eigenvalue": 0.0012647139536063209
+      }
+    ]
+  },
+  "finite_difference_stability": [
+    {
+      "step": 0.0001,
+      "relative_frobenius_difference_from_1e-5": 2.9770688521778197e-09,
+      "trace_inverse": 706.1388796666665,
+      "minimum_eigenvalue": 0.0014586661871606628
+    },
+    {
+      "step": 1e-05,
+      "relative_frobenius_difference_from_1e-5": 0.0,
+      "trace_inverse": 706.1388810318568,
+      "minimum_eigenvalue": 0.0014586661840502644
+    },
+    {
+      "step": 1e-06,
+      "relative_frobenius_difference_from_1e-5": 3.002322997358602e-10,
+      "trace_inverse": 706.1388810194528,
+      "minimum_eigenvalue": 0.0014586661840701863
+    }
+  ],
+  "structural_checks": {
+    "G2_posterior_gap": 0.628244994442177,
+    "G2_prior_asymmetry": 0.8999999999999999,
+    "G4_perfect_signal_chi_information": 0.0,
+    "G4_perfect_signal_cursing_collapse": true
+  },
+  "auction_contraction_certificate": {
+    "reduced_affine_diameter": 0.6591666666666661,
+    "contraction_modulus": 0.29662499999999975,
+    "certified_unique": true,
+    "critical_lambda": 6.068268015170675,
+    "maximizing_signal": 0,
+    "maximizing_bid": 0,
+    "comparison_bid": 2,
+    "coefficient_shape": [
+      3,
+      3,
+      6
+    ]
+  },
+  "checks": {
+    "optimizer_success": true,
+    "full_rank_battery": true,
+    "unique_auction_equilibrium": true,
+    "auction_contraction": true,
+    "perfect_signal_cursing_collapse": true,
+    "finite_difference_stability": true
+  },
+  "all_pass": true
+}

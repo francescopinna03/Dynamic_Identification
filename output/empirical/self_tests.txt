@@ -1,0 +1,37 @@
+PASS: Schur complement and SE(tau) coincide for all 16 games
+Fold G01: training=15 games, pi=E:0.102, L1:0.330, L2:0.318, L3:0.068, D1:0.034, D2:0.148
+Fold G02: training=15 games, pi=E:0.080, L1:0.352, L2:0.284, L3:0.057, D1:0.068, D2:0.159
+Fold G03: training=15 games, pi=E:0.091, L1:0.341, L2:0.284, L3:0.057, D1:0.057, D2:0.170
+Fold G04: training=15 games, pi=E:0.091, L1:0.364, L2:0.295, L3:0.057, D1:0.045, D2:0.148
+Fold G05: training=15 games, pi=E:0.091, L1:0.341, L2:0.307, L3:0.057, D1:0.057, D2:0.148
+Fold G06: training=15 games, pi=E:0.091, L1:0.273, L2:0.318, L3:0.080, D1:0.080, D2:0.159
+Fold G07: training=15 games, pi=E:0.080, L1:0.341, L2:0.295, L3:0.057, D1:0.125, D2:0.102
+Fold G08: training=15 games, pi=E:0.080, L1:0.341, L2:0.295, L3:0.057, D1:0.125, D2:0.102
+Fold G09: training=15 games, pi=E:0.080, L1:0.364, L2:0.239, L3:0.091, D1:0.057, D2:0.170
+Fold G10: training=15 games, pi=E:0.114, L1:0.318, L2:0.330, L3:0.034, D1:0.068, D2:0.136
+Fold G11: training=15 games, pi=E:0.080, L1:0.375, L2:0.227, L3:0.091, D1:0.080, D2:0.148
+Fold G12: training=15 games, pi=E:0.080, L1:0.352, L2:0.307, L3:0.114, D1:0.057, D2:0.091
+Fold G13: training=15 games, pi=E:0.068, L1:0.352, L2:0.284, L3:0.091, D1:0.068, D2:0.136
+Fold G14: training=15 games, pi=E:0.102, L1:0.330, L2:0.273, L3:0.080, D1:0.057, D2:0.159
+Fold G15: training=15 games, pi=E:0.068, L1:0.341, L2:0.273, L3:0.102, D1:0.068, D2:0.148
+Fold G16: training=15 games, pi=E:0.068, L1:0.341, L2:0.284, L3:0.080, D1:0.068, D2:0.159
+Fold G01: training=15 games, pi=E:0.102, L1:0.330, L2:0.318, L3:0.068, D1:0.034, D2:0.148
+Fold G02: training=15 games, pi=E:0.114, L1:0.170, L2:0.341, L3:0.091, D1:0.091, D2:0.193
+Fold G03: training=15 games, pi=E:0.125, L1:0.159, L2:0.307, L3:0.114, D1:0.091, D2:0.205
+Fold G04: training=15 games, pi=E:0.114, L1:0.193, L2:0.330, L3:0.114, D1:0.080, D2:0.170
+Fold G05: training=15 games, pi=E:0.114, L1:0.159, L2:0.330, L3:0.114, D1:0.114, D2:0.170
+Fold G06: training=15 games, pi=E:0.125, L1:0.136, L2:0.330, L3:0.125, D1:0.102, D2:0.182
+Fold G07: training=15 games, pi=E:0.125, L1:0.193, L2:0.341, L3:0.091, D1:0.148, D2:0.102
+Fold G08: training=15 games, pi=E:0.125, L1:0.182, L2:0.330, L3:0.091, D1:0.159, D2:0.114
+Fold G09: training=15 games, pi=E:0.136, L1:0.170, L2:0.307, L3:0.102, D1:0.080, D2:0.205
+Fold G10: training=15 games, pi=E:0.125, L1:0.159, L2:0.364, L3:0.080, D1:0.114, D2:0.159
+Fold G11: training=15 games, pi=E:0.102, L1:0.170, L2:0.295, L3:0.148, D1:0.102, D2:0.182
+Fold G12: training=15 games, pi=E:0.091, L1:0.182, L2:0.375, L3:0.148, D1:0.080, D2:0.125
+Fold G13: training=15 games, pi=E:0.080, L1:0.170, L2:0.330, L3:0.125, D1:0.125, D2:0.170
+Fold G14: training=15 games, pi=E:0.114, L1:0.159, L2:0.330, L3:0.136, D1:0.068, D2:0.193
+Fold G15: training=15 games, pi=E:0.068, L1:0.170, L2:0.341, L3:0.148, D1:0.114, D2:0.159
+Fold G16: training=15 games, pi=E:0.102, L1:0.170, L2:0.318, L3:0.125, D1:0.102, D2:0.182
+PASS: changing every G1 test choice does not change the G1 fold types
+PASS: conditional G4 collapses relative to chi under a perfect signal
+PASS: sample size uses per-subject Fisher information without post-hoc division
+SELF-TESTS: ALL PASS

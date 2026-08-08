@@ -1,0 +1,93 @@
+{
+  "model": "conditional one-dimensional WF-SBB generic cursed-association slice",
+  "config": {
+    "n_grid": 7,
+    "n_steps": 8,
+    "epsilon": 0.15,
+    "kappa": 0.05,
+    "theta": 9.9,
+    "rho": 1.0,
+    "cone_lambda": 4.0,
+    "entropy_epsilon": 0.005,
+    "chi": 0.45,
+    "correct_association": 0.45,
+    "independent_association": 0.36,
+    "initial_center": 0.38,
+    "initial_scale": 0.105,
+    "terminal_center": 0.44,
+    "terminal_scale": 0.115,
+    "model_label": "generic cursed-association slice",
+    "lower_bound": 1e-12,
+    "seed": 42
+  },
+  "grid": [
+    0.15,
+    0.26666666666666666,
+    0.3833333333333333,
+    0.5,
+    0.6166666666666666,
+    0.7333333333333333,
+    0.85
+  ],
+  "cursed_anchor": 0.40950000000000003,
+  "inward_margin": 0.054050000000000153,
+  "optimization": {
+    "success": true,
+    "message": "Optimization terminated successfully",
+    "solver": "SLSQP with projected-Newton active-face refinement",
+    "iterations": 102,
+    "objective": 0.1523180989646405,
+    "equality_residual": 5.551115123125783e-17,
+    "cone_residual": -1.2156971775811476e-05,
+    "reduced_gradient_residual": 7.727573138674448e-12,
+    "stationarity_residual": 9.812206602788365e-12,
+    "minimum_flow": 9.555881249545385e-06,
+    "active_bounds": [],
+    "active_cones": [],
+    "minimum_active_multiplier": null,
+    "reduced_hessian_min_eigenvalue": 0.10479766533950592
+  },
+  "endpoint_error": 1.8041124150158794e-16,
+  "maximum_relative_covariance": 1.8638481457362963,
+  "minimum_relative_cone_slack": 2.1361518542637037,
+  "implicit": {
+    "stationarity_residual": 9.812206602788365e-12,
+    "constraint_derivative_residual": 5.521841664468674e-16,
+    "kkt_condition_number": 40709969.817338936,
+    "reduced_hessian_min_eigenvalue": 0.10479766533950592,
+    "active_bound_count": 0,
+    "active_cone_count": 0,
+    "minimum_active_multiplier": null
+  },
+  "implicit_finite_difference_relative_error": 1.5805544257206996e-09,
+  "analytic_derivative_checks": {
+    "step": 1e-06,
+    "gradient_directional_relative_error": 2.3352566602685698e-08,
+    "hessian_directional_relative_error": 8.27613773511255e-08,
+    "objective_at_solution": 0.15988723483327838
+  },
+  "information": {
+    "score_mean": -7.538593230563273e-19,
+    "process_fisher": 0.022740293100292422,
+    "transition_fisher_sum": 0.022740293100292422,
+    "martingale_difference_decomposition_error": 0.0,
+    "maximum_conditional_score_mean": 3.284662302055044e-17,
+    "endpoint_fisher": 0.0
+  },
+  "checks": {
+    "optimization": true,
+    "exact_endpoint": true,
+    "cone": true,
+    "active_set_stable": true,
+    "strict_complementarity": true,
+    "inward_condition": true,
+    "positive_reduced_hessian": true,
+    "implicit_derivative": true,
+    "analytic_gradient": true,
+    "analytic_hessian": true,
+    "score_centered": true,
+    "score_information_decomposition": true,
+    "process_information_positive": true
+  },
+  "all_pass": true
+}
