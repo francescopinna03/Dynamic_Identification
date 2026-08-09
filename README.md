@@ -57,7 +57,7 @@ residuals reach the order of 1e-15, so results at the last digits are sensitive
 to the linear-algebra backend, and `environment.json` is what makes a
 discrepancy diagnosable.
 
-Approximate runtime: <!-- fill in, est. 12 min. (to be updated) -->
+Approximate runtime: Observed runtime on a MacBook Air with an Apple M2 processor and 8 GB of memory, using macOS 26.5.2 and Python 3.14.0: 1 minute 40.45 seconds for a fresh run including data acquisition, and 1 minute 4.77 seconds with the archives already downloaded (`--skip-download`). Environment creation and dependency installation are excluded.
 
 ## Layout
 
