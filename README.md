@@ -3,8 +3,7 @@
 Replication package for the working paper *Dynamic Identification of Behavioral
 Reasoning in Finite Games* (Francesco Pinna, LUISS Guido Carli).
 
-Paper: forthcoming on SSRN; this line will carry the link once the preprint is
-live.
+Preprint available at https://ssrn.com/abstract=7251718 or http://dx.doi.org/10.2139/ssrn.7251718
 Contact: [francesco.pinna@studenti.luiss.it](mailto:francesco.pinna@studenti.luiss.it)
 
 The results reported in the paper were produced at tag
@@ -125,11 +124,9 @@ object of the empirical analysis rather than a premise of it.
 
 ## Citation
 
-<!-- Coming soon! -->
-
 ```
 Pinna, F. (2026). Dynamic Identification of Behavioral Reasoning in Finite
-Games. Working paper.
+Games. Available at SSRN: https://ssrn.com/abstract=7251718 or http://dx.doi.org/10.2139/ssrn.7251718
 ```
 
 ## License
