@@ -11,11 +11,19 @@ def run(command: list[str], root: Path) -> None:
     subprocess.run(command, cwd=root, check=True)
 
 
+def run_logged(command: list[str], root: Path, target: Path) -> None:
+    print("\n$ " + " ".join(command) + " > " + str(target), flush=True)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with target.open("w", encoding="utf-8") as stream:
+        subprocess.run(command, cwd=root, check=True, stdout=stream)
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--skip-download", action="store_true")
     parser.add_argument("--skip-empirical", action="store_true")
     parser.add_argument("--skip-theoretical", action="store_true")
+    parser.add_argument("--skip-verification", action="store_true")
     parser.add_argument("--n-perm", type=int, default=2000)
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args(argv)
@@ -65,6 +73,12 @@ def main(argv=None) -> int:
              "--output", str(output / "log_domain_boundary_layer.json"),
              "--csv-output", str(output / "log_domain_information_path.csv"),
              "--seed", str(args.seed)], root)
+
+    if not args.skip_verification:
+        for name in ("verify_two_scale", "verify_revision_checks",
+                     "verify_identified_sets", "verify_repeated_paths"):
+            run_logged([python, str(theoretical / f"{name}.py")], root,
+                       output / "verification" / f"{name}.txt")
 
     run([python, str(root / "code" / "verify_artifacts.py"),
          "--root", str(root)], root)

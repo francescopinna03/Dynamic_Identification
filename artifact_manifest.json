@@ -1,5 +1,5 @@
 {
-  "release": "1.0",
+  "release": "2.0",
   "artifacts": [
     {
       "path": "reference_outputs/empirical/crossfit_mixtures.csv",
@@ -85,6 +85,26 @@
       "path": "reference_outputs/theoretical/robustness_wf_sbb.json",
       "size_bytes": 52780,
       "sha256": "17759f3b873fa6c1dbd888bb29c09f8418baca0b4c56b4f824a1d7ac736d422f"
+    },
+    {
+      "path": "reference_outputs/verification/verify_identified_sets.txt",
+      "size_bytes": 2247,
+      "sha256": "9b8c17987300d4b0bfca7443b79ceca2d8d3b876e460ca4cc6878d55f3b0fcc6"
+    },
+    {
+      "path": "reference_outputs/verification/verify_repeated_paths.txt",
+      "size_bytes": 1102,
+      "sha256": "6643c4105b95e21e2f9008e5c2da3551b131c1b2cc41fe49817d13ac5cf40389"
+    },
+    {
+      "path": "reference_outputs/verification/verify_revision_checks.txt",
+      "size_bytes": 2860,
+      "sha256": "94cd4d0e5527bce9db25cfba1fd88c670a51d515a72edd33144a3f5b8c00ba23"
+    },
+    {
+      "path": "reference_outputs/verification/verify_two_scale.txt",
+      "size_bytes": 3203,
+      "sha256": "2100869ffc75610fc296f97fedcff3e19dc56e790ef30a3423baf6a10fab1454"
     }
   ]
 }

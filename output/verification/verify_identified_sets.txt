@@ -1,0 +1,28 @@
+INSTANCE  true cost=0.058043  profile minimum=0.000539  budget=0.001078  p=[0.31418 0.20607 0.21291 0.26684]
+PROFILE   w(chi) at nodes 0,.2,.4,.6,.8,1 = [0.00383 0.00182 0.00074 0.00059 0.00135 0.00304]
+          negative second differences: 0 out of 39
+          exact identified set: [0.3250, 0.7500]  nodes=18  connected=True
+          w_rel <= w everywhere: True   largest gap w-w_rel=0.001017
+          relaxed interval [0.1679, 0.8936]
+          Lipschitz sqrt(w): max slope=0.09941  theoretical constant=0.17678  ok=True
+MIXTURE   w(chi) at nodes 0,.2,.4,.6,.8,1 = [0.00697 0.00383 0.00163 0.00038 0.00007 0.00069]
+          negative second differences: 0
+EFFICIENCY  full information=0.00639  time-only=0.00011  state-only=0.00000  free=7.343e-34
+            rank of free B=4 (tangent space of the 4-cell simplex = 3)
+INTERVENTION  inf_h=0.435137  formula w0w1/(w0+w1)||g1-g0||^2=0.435137
+ELBOW (d=1): slope of log sqrt(MSE) against log eps
+   m=0.10  slope=0.573  expected=0.571
+   m=0.25  slope=1.000  expected=1.000
+   m=0.50  slope=1.003  expected=1.000
+INFERENCE N=300 R=40  P(p in R_N)=0.975  set coverage: Pearson=1.000 Hoeffding=1.000  mean nodes: Pearson=16.88 Hoeffding=17.00  true=7
+INFERENCE N=5000 R=20  P(p in R_N)=0.950  set coverage: Pearson=1.000 Hoeffding=1.000  mean nodes: Pearson=15.90 Hoeffding=17.00  true=7
+BOUNDARY  chi_plus=0.75046  d_chi w=4.98334e-03  Var_p(grad)=7.27097e-03  boundary information=3.41546e-03
+          multiplier (centered) = [-0.08432 -0.08673  0.08673  0.08432]  numerical gradient (centered) = [ 0.08432  0.08673 -0.08673 -0.08432]
+          eta=0.01  delta=3.6315e-07  info*eta^2=3.4155e-07  ratio=1.063
+          eta=0.02  delta=1.5429e-06  info*eta^2=1.3662e-06  ratio=1.129
+          eta=0.04  delta=6.9408e-06  info*eta^2=5.4647e-06  ratio=1.270
+          eta=0.08  delta=3.4498e-05  info*eta^2=2.1859e-05  ratio=1.578
+          chi=0.80  delta=1.124e-05  N to exclude: projection=695231  one-sided direction=240696
+          chi=0.90  delta=1.626e-04  N to exclude: projection=48065  one-sided direction=16641
+          chi=1.00  delta=5.898e-04  N to exclude: projection=13250  one-sided direction=4587
+          one-sided half-width for chi_plus at N=300 and N=5000: [1.625, 0.398]

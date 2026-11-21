@@ -1,0 +1,55 @@
+CHECK 1  Gaussian KL formula against h_sp plus drift term
+  kl=0.1437394420  decomp=0.1437394420  diff=2.22e-16
+  kl=0.1074542741  decomp=0.1074542741  diff=6.94e-17
+  kl=0.6094582535  decomp=0.6094582535  diff=2.22e-16
+  kl=0.8610338576  decomp=0.8610338576  diff=7.77e-16
+  kl=0.7747398600  decomp=0.7747398600  diff=5.55e-16
+CHECK 2  smooth flows, H_n/n -> Csp and H_n - n R_n -> Cb
+  n=    10  H/n=0.15393935  Csp=0.12644405  H-nRn=0.27804247  Cb_n=0.27804247  Cb=0.29707153
+  n=   100  H/n=0.12936370  Csp=0.12644405  H-nRn=0.29500968  Cb_n=0.29500968  Cb=0.29707153
+  n=  1000  H/n=0.12673788  Csp=0.12644405  H-nRn=0.29686376  Cb_n=0.29686376  Cb=0.29707153
+  n= 10000  H/n=0.12647345  Csp=0.12644405  H-nRn=0.29705074  Cb_n=0.29705074  Cb=0.29707153
+CHECK 3  Taylor expansion of h_sp, constant 1/4 in the Fisher-Rao metric
+  eps=1e-01  h/eps^2=0.00688854  FR=0.00688457
+  eps=1e-02  h/eps^2=0.00688492  FR=0.00688457
+  eps=1e-03  h/eps^2=0.00688460  FR=0.00688457
+  eps=1e-04  h/eps^2=0.00688457  FR=0.00688457
+CHECK 4  local limit at scale sqrt(Delta) and exponent dichotomy
+  expected limit = Cb + int FR = 0.30055224
+  n=   100  gamma=0.5  H_n=0.29846905
+  n=  1000  gamma=0.5  H_n=0.30033790
+  n= 10000  gamma=0.5  H_n=0.30052938
+  n=100000  gamma=0.5  H_n=0.30054951
+  n=   100  gamma=0.4  H_n=0.303670   gamma=0.6  H_n=0.29638986  (Cb=0.29707153)
+  n=  1000  gamma=0.4  H_n=0.310669   gamma=0.6  H_n=0.29773723  (Cb=0.29707153)
+  n= 10000  gamma=0.4  H_n=0.318980   gamma=0.6  H_n=0.29760226  (Cb=0.29707153)
+CHECK 5  Bures tensor against Fisher-Rao, sandwich [vmin, vmax]
+  ratio=7.944234  in [5.365113, 20.825706]  ok=True
+    quadratic expansion dB^2/eps^2 = 0.010000  g_B = 0.010010
+  ratio=4.597251  in [3.921745, 10.099492]  ok=True
+    quadratic expansion dB^2/eps^2 = 0.008499  g_B = 0.008498
+  ratio=1.149894  in [1.133705, 1.311861]  ok=True
+    quadratic expansion dB^2/eps^2 = 0.023685  g_B = 0.023686
+  ratio=5.430429  in [3.346786, 13.142986]  ok=True
+    quadratic expansion dB^2/eps^2 = 0.009720  g_B = 0.009722
+  ratio=5.612745  in [5.152335, 10.266520]  ok=True
+    quadratic expansion dB^2/eps^2 = 0.039326  g_B = 0.039329
+  ratio=1.481347  in [1.350352, 2.075690]  ok=True
+    quadratic expansion dB^2/eps^2 = 0.026566  g_B = 0.026567
+CHECK 6  global comparability on the cone slice eps<=s<=Lam
+  violations over 400 draws: 0
+CHECK 7  smallest tangent eigenvalue of C(x) >= n delta^2
+  minimum over 2000 draws of lam_min / (n x_min^2) = 1.048244  (>=1 expected)
+CHECK 8  perspective closure: r h(A/r||abar) -> tr(abar^-1 A)/2
+  r=1e-01  r h(A/r)=0.61191676  limit=1.00631122
+  r=1e-02  r h(A/r)=0.93233300  limit=1.00631122
+  r=1e-03  r h(A/r)=0.99545952  limit=1.00631122
+  r=1e-04  r h(A/r)=1.00488066  limit=1.00631122
+  r=1e-06  r h(A/r)=1.00629000  limit=1.00631122
+CHECK 9  degeneracy: dB^2 bounded on the cone, h_sp = inf for singular a
+  dB^2(a_sing, abar) = 4.041278  tr(abar)(1+sqrt(Lam))^2 bound = 79.165949
+  h_sp(a_sing || abar) = inf
+  dB^2(0, abar) = 8.796217  tr(abar) = 8.796217
+CHECK 10  shadow price: v(c) convex and rho in -dv(c) on a convex instance
+  v(c) nonincreasing=True  convex (diff2>=0)=True
+  rho=3.0  cB*=0.00170  estimated -v'(c)=2.9046

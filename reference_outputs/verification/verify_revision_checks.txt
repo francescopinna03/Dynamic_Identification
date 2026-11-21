@@ -1,0 +1,48 @@
+A  causal counterexample: martingale preserved, conditional law anticipated
+  E[M1|X0=0]=0.500  E[(M1-.5)^2|X0=0]=0.010
+  E[M1|X0=1]=0.500  E[(M1-.5)^2|X0=1]=0.090
+  E[(M1-.5)^2]=0.050
+  tilt 2*1(X0=M1): M marginal=[0.5 0.5]  P(M1=X0)=1.00
+B  reference invariance and budget interval
+  formula [-0.874853,-0.297858]  grid [-0.874850,-0.297875]
+  chi=0.1: reconstructed b identical=True
+  chi=0.7: reconstructed b identical=True
+C  order-one quadrature correction, limit -(1-log2)/4
+  n=   1000  S_n - n I = -0.076692   target -0.076713
+  n=  10000  S_n - n I = -0.076711   target -0.076713
+  n= 100000  S_n - n I = -0.076713   target -0.076713
+  n=1000000  S_n - n I = -0.076713   target -0.076713
+D  factor rho/4 in the balanced regime
+  n=    100  n*ell=1.720730   rho tr(B^2)/4=1.817155
+  n=  10000  n*ell=1.804668   rho tr(B^2)/4=1.817155
+  n=1000000  n*ell=1.815875   rho tr(B^2)/4=1.817155
+E  innovation energy under shared noise (Schur)
+  drift=(0,u) ok=True  energy=5.441473  u'S^-1 u/2=5.441473
+  drift=(0,u) ok=True  energy=6.528877  u'S^-1 u/2=6.528877
+  drift=(0,u) ok=True  energy=1.241615  u'S^-1 u/2=1.241615
+  scalar r=0.6: u^2/(2(1-r^2))=1.320312
+F  price pair: formulas, pi*, intervals, anchoring, efficient information
+  pi*=0.666667 (grid 0.666667)  D(pi*)=20.000000 (grid 20.000000)
+  pi=.4: U=54.0000  C=38.5714  S(chi=.25)=42.4286
+  windows U[50,55] S[40,45]: chi in [0.0571, 0.6250]
+  anchoring z=.1 c=57.5 (a,b)=(0.2,0.8): apparent chi=0.1098
+  anchoring z=.1 c=57.5 (a,b)=(0.4,0.6): apparent chi=0.1062
+  anchoring z=.1 c=57.5 (a,b)=(0.3,0.7): apparent chi=0.1081
+  efficient information: matrix=129.898960  formula=129.898960
+G  depth variance is not injective in tau
+  tau=0.25: Var=0.1600
+  tau=4.0: Var=0.1600
+  tau=1.0: Var=0.2500
+H  parametric sender-receiver determinant (spot check)
+  numerical det=-0.00983547  formula=-0.00983547
+I  joint statements, pull between prices, geometric counterpart
+  pull: largest deviation from 1-(1-chi)(1-z_U) and from the recovered weight = 2.83e-15
+  pull z_U=.10, chi=0.0: apparent contraction=0.1000
+  pull z_U=.10, chi=0.15: apparent contraction=0.2350
+  pull z_U=.10, chi=0.25: apparent contraction=0.3250
+  geometric table: conditional=0.201673  formula=0.201673  high-value marginal=0.3922 (prior 0.4)
+  mixture table:   conditional=0.220000  formula=0.220000  high-value marginal=0.4000
+  log-odds linearity residual=2.22e-16
+  (a,b)=(0.35,0.65): pi*=0.5768  gap=9.212  pi_J(pi*)+pi*=1.000000  S-Sgeo at pi=.4, chi=.5: 0.215  at pi*, chi=.5: 0.0e+00  max over chi at pi*: 0.014
+  (a,b)=(0.2,0.8): pi*=0.6667  gap=20.000  pi_J(pi*)+pi*=1.000000  S-Sgeo at pi=.4, chi=.5: 1.286  at pi*, chi=.5: 0.0e+00  max over chi at pi*: 0.151
+  (a,b)=(0.05,0.95): pi*=0.8134  gap=37.607  pi_J(pi*)+pi*=1.000000  S-Sgeo at pi=.4, chi=.5: 5.058  at pi*, chi=.5: -7.1e-15  max over chi at pi*: 1.181
