@@ -1,28 +1,39 @@
-INSTANCE  true cost=0.058043  profile minimum=0.000539  budget=0.001078  p=[0.31418 0.20607 0.21291 0.26684]
-PROFILE   w(chi) at nodes 0,.2,.4,.6,.8,1 = [0.00383 0.00182 0.00074 0.00059 0.00135 0.00304]
+TOLERANCES  conic solver CLARABEL at default accuracy  root bisection=1e-07  certified cells=1e-04  singular values=1e-10
+INSTANCE  reference drift=[ 0.2175 -0.05   -0.2675]  load=[0.0125 0.05   0.0375]
+          generating law: cursedness=0.40  cost=0.000411  budget=0.000411  p=[0.31137 0.2055  0.2129  0.27022]
+          profile minimum on the grid=0.000019 at chi=0.300  profile at the generating cursedness=0.000078
+PREFIX    prefix cost against state cost of the generating law: 4.88e-19
+          largest gap between prefix and state profiles on the grid: 1.82e-10
+          history-dependent law: prefix cost=0.003167  state cost=0.000012
+          kernel on initial and final state at chi=0.4: prefix profile=0.001218  state profile=0.000000
+PROFILE   w(chi) at nodes 0,.2,.4,.6,.8,1 = [0.00052 0.00007 0.00008 0.00054 0.00146 0.00285]
           negative second differences: 0 out of 39
-          exact identified set: [0.3250, 0.7500]  nodes=18  connected=True
-          w_rel <= w everywhere: True   largest gap w-w_rel=0.001017
-          relaxed interval [0.1679, 0.8936]
-          Lipschitz sqrt(w): max slope=0.09941  theoretical constant=0.17678  ok=True
-MIXTURE   w(chi) at nodes 0,.2,.4,.6,.8,1 = [0.00697 0.00383 0.00163 0.00038 0.00007 0.00069]
+          admitted nodes: first=0.0500 last=0.5500  count=21  consecutive=True
+          threshold crossings: lower=0.034395 upper=0.560790  width=0.526396
+          Lipschitz sqrt(w): max slope=0.07605  theoretical constant=0.10206  ok=True
+          certified inner set=[[0.034473, 0.560742]]  certified outer set=[[0.034375, 0.56084]]  additional solves=24
+          w_rel <= w everywhere: True   largest gap w-w_rel=0.000562
+          relaxed interval [0.0214, 0.7067]
+MIXTURE   w(chi) at nodes 0,.2,.4,.6,.8,1 = [0.00208 0.00094 0.00024 0.      0.00022 0.0009 ]
           negative second differences: 0
-EFFICIENCY  full information=0.00639  time-only=0.00011  state-only=0.00000  free=7.343e-34
-            rank of free B=4 (tangent space of the 4-cell simplex = 3)
+EFFICIENCY  full information=0.00636  time-only=0.00011  state-only=6.380e-34  free=2.191e-33
+            singular values of the free block=[7.53514e-01 4.43708e-01 2.36065e-01 4.99781e-17]  rank=3 (tangent space of the 4-cell simplex = 3)
+            rank of the state-only block=3  rank of the time-only block=2
 INTERVENTION  inf_h=0.435137  formula w0w1/(w0+w1)||g1-g0||^2=0.435137
 ELBOW (d=1): slope of log sqrt(MSE) against log eps
    m=0.10  slope=0.573  expected=0.571
    m=0.25  slope=1.000  expected=1.000
    m=0.50  slope=1.003  expected=1.000
-INFERENCE N=300 R=40  P(p in R_N)=0.975  set coverage: Pearson=1.000 Hoeffding=1.000  mean nodes: Pearson=16.88 Hoeffding=17.00  true=7
-INFERENCE N=5000 R=20  P(p in R_N)=0.950  set coverage: Pearson=1.000 Hoeffding=1.000  mean nodes: Pearson=15.90 Hoeffding=17.00  true=7
-BOUNDARY  chi_plus=0.75046  d_chi w=4.98334e-03  Var_p(grad)=7.27097e-03  boundary information=3.41546e-03
-          multiplier (centered) = [-0.08432 -0.08673  0.08673  0.08432]  numerical gradient (centered) = [ 0.08432  0.08673 -0.08673 -0.08432]
-          eta=0.01  delta=3.6315e-07  info*eta^2=3.4155e-07  ratio=1.063
-          eta=0.02  delta=1.5429e-06  info*eta^2=1.3662e-06  ratio=1.129
-          eta=0.04  delta=6.9408e-06  info*eta^2=5.4647e-06  ratio=1.270
-          eta=0.08  delta=3.4498e-05  info*eta^2=2.1859e-05  ratio=1.578
-          chi=0.80  delta=1.124e-05  N to exclude: projection=695231  one-sided direction=240696
-          chi=0.90  delta=1.626e-04  N to exclude: projection=48065  one-sided direction=16641
-          chi=1.00  delta=5.898e-04  N to exclude: projection=13250  one-sided direction=4587
-          one-sided half-width for chi_plus at N=300 and N=5000: [1.625, 0.398]
+INFERENCE N=300 R=1000  P(p in R_N)=0.944  set coverage: Pearson=0.978 Hoeffding=1.000  mean nodes: Pearson=16.67 Hoeffding=17.00  true=8  solves not reported optimal=6
+INFERENCE N=5000 R=1000  P(p in R_N)=0.938  set coverage: Pearson=0.990 Hoeffding=1.000  mean nodes: Pearson=15.90 Hoeffding=16.95  true=8  solves not reported optimal=46
+BOUNDARY  chi_plus=0.56079  d_chi w=2.99562e-03  Var_p(grad)=1.78091e-03  boundary information=5.03883e-03
+          multiplier (centered) = [-0.05595 -0.0102   0.01338  0.05277]  numerical gradient (centered) = [ 0.05595  0.0102  -0.01339 -0.05277]
+          eta=0.01  delta=5.1102e-07  info*eta^2=5.0388e-07  ratio=1.014
+          eta=0.02  delta=2.0691e-06  info*eta^2=2.0155e-06  ratio=1.027
+          eta=0.04  delta=8.4529e-06  info*eta^2=8.0621e-06  ratio=1.048
+          eta=0.08  delta=3.4908e-05  info*eta^2=3.2249e-05  ratio=1.082
+          chi=0.70  delta=1.091e-04  critical value over delta: projection=71629  one-sided direction=24799
+          chi=0.80  delta=3.328e-04  critical value over delta: projection=23479  one-sided direction=8129
+          chi=0.90  delta=6.832e-04  critical value over delta: projection=11439  one-sided direction=3960
+          chi=1.00  delta=1.162e-03  critical value over delta: projection=6724  one-sided direction=2328
+          one-sided half-width for chi_plus at N=300 and N=5000: [1.338, 0.328]

@@ -8,16 +8,16 @@ OCCUPATION MOMENTS  (expected: d=2 E L^2 ~ K^0.5, d=3 E L^2 ~ K log K)
   d=3 K= 8  E L=1.000  E L^2=7.433  sup_x E_x L=5.538
   d=3 K=16  E L=1.000  E L^2=18.102  sup_x E_x L=12.999
   d=3 slopes: E L^2 1.30  sup_x E_x L 1.21
-ESTIMATOR RATE d=2  (expected slopes: m=0.25 -> -1/3, m=1 -> -1/2)
-  m=0.25 N= 100 K= 8  Q=0.1380  rmse=0.2936
-  m=0.25 N= 200 K=12  Q=0.1170  rmse=0.2476
-  m=0.25 N= 400 K=19  Q=0.1028  rmse=0.0964
-  m=0.25 N= 800 K=30  Q=0.0825  rmse=0.1539
-  m=0.25 N=1600 K=48  Q=0.0833  rmse=0.0661
+ESTIMATOR RATE d=2  (expected slopes: m=0.25 -> -1/3, m=1 -> -1/2; cells kept when normalized occupation >= 0.25)
+  m=0.25 N= 100 K= 8  Q=0.1380  rmse=0.2936  smallest reference occupation=0.834  dropped cells=0
+  m=0.25 N= 200 K=12  Q=0.1170  rmse=0.2476  smallest reference occupation=0.860  dropped cells=0
+  m=0.25 N= 400 K=19  Q=0.1028  rmse=0.0964  smallest reference occupation=0.849  dropped cells=0
+  m=0.25 N= 800 K=30  Q=0.0825  rmse=0.1539  smallest reference occupation=0.850  dropped cells=0
+  m=0.25 N=1600 K=48  Q=0.0833  rmse=0.0661  smallest reference occupation=0.797  dropped cells=0
   m=0.25 fitted slope -0.499
-  m=1.00 N= 100 K= 5  Q=0.0566  rmse=0.1565
-  m=1.00 N= 200 K= 6  Q=0.0480  rmse=0.0805
-  m=1.00 N= 400 K= 7  Q=0.0523  rmse=0.0661
-  m=1.00 N= 800 K= 9  Q=0.0467  rmse=0.0317
-  m=1.00 N=1600 K=12  Q=0.0473  rmse=0.0247
+  m=1.00 N= 100 K= 5  Q=0.0566  rmse=0.1565  smallest reference occupation=0.906  dropped cells=0
+  m=1.00 N= 200 K= 6  Q=0.0480  rmse=0.0805  smallest reference occupation=0.894  dropped cells=0
+  m=1.00 N= 400 K= 7  Q=0.0523  rmse=0.0661  smallest reference occupation=0.893  dropped cells=0
+  m=1.00 N= 800 K= 9  Q=0.0467  rmse=0.0317  smallest reference occupation=0.887  dropped cells=0
+  m=1.00 N=1600 K=12  Q=0.0473  rmse=0.0247  smallest reference occupation=0.876  dropped cells=0
   m=1.00 fitted slope -0.667

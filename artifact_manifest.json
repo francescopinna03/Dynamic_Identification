@@ -1,5 +1,5 @@
 {
-  "release": "2.0",
+  "release": "2.1",
   "artifacts": [
     {
       "path": "reference_outputs/empirical/crossfit_mixtures.csv",
@@ -88,13 +88,13 @@
     },
     {
       "path": "reference_outputs/verification/verify_identified_sets.txt",
-      "size_bytes": 2247,
-      "sha256": "9b8c17987300d4b0bfca7443b79ceca2d8d3b876e460ca4cc6878d55f3b0fcc6"
+      "size_bytes": 3448,
+      "sha256": "2a61b19a4f9b8f850ce6860735560e7f0d2426b958b1715b0e3dc7be64c6b021"
     },
     {
       "path": "reference_outputs/verification/verify_repeated_paths.txt",
-      "size_bytes": 1102,
-      "sha256": "6643c4105b95e21e2f9008e5c2da3551b131c1b2cc41fe49817d13ac5cf40389"
+      "size_bytes": 1689,
+      "sha256": "af3455f062e630d7ff8015f2db8a2d70708322395ee4918f3680a28139d96636"
     },
     {
       "path": "reference_outputs/verification/verify_revision_checks.txt",

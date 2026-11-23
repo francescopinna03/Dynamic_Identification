@@ -1,5 +1,5 @@
 {
-  "release": "2.0",
+  "release": "2.1",
   "python": "3.14.0",
   "platform": "macOS arm64",
   "packages": {

@@ -1,5 +1,6 @@
 import numpy as np
 rng = np.random.default_rng(20261030)
+FLOOR = 0.25
 
 def cell_ids(x, t, K, d):
     cid = np.full(x.shape[0], min(int(t * K), K - 1))
@@ -57,15 +58,15 @@ def paths_d2(N, K, rho, signs, dt, w0amp):
         x = (x + dx) % 1.0
     return S, Lc, Qp
 
-def estimate(S, Lc):
+def estimate(S, Lc, K):
     N = S.shape[0]; A = np.arange(N // 2); B = np.arange(N // 2, N)
     G = Lc[A].mean(0)
     nB = len(B)
     U = (S[B].sum(0) ** 2 - (S[B] ** 2).sum(0)) / (nB * (nB - 1))
-    ok = G > 0
-    return np.sum(U[ok] / G[ok])
+    ok = K * K * G >= FLOOR
+    return np.sum(U[ok] / G[ok]), int(np.sum(~ok))
 
-print("ESTIMATOR RATE d=2  (expected slopes: m=0.25 -> -1/3, m=1 -> -1/2)")
+print("ESTIMATOR RATE d=2  (expected slopes: m=0.25 -> -1/3, m=1 -> -1/2; cells kept when normalized occupation >= %.2f)" % FLOOR)
 for m_s, cK, reps in [(0.25, 0.35, 8), (1.0, 1.0, 8)]:
     out = []
     for N in [100, 200, 400, 800, 1600]:
@@ -73,14 +74,17 @@ for m_s, cK, reps in [(0.25, 0.35, 8), (1.0, 1.0, 8)]:
         rho = 0.5 * K ** (-m_s - 1)
         signs = rng.choice([-1.0, 1.0], size=K * K)
         dt = min(1e-4, 1 / (10 * K * K))
-        _, _, Qtrue = paths_d2(4000, K, rho, signs, dt, 0.3)
+        _, Lref, Qtrue = paths_d2(4000, K, rho, signs, dt, 0.3)
         Q = Qtrue.mean()
         errs = []
+        dropped = 0
         for r in range(reps):
             S, Lc, _ = paths_d2(N, K, rho, signs, dt, 0.3)
-            errs.append(estimate(S, Lc) - Q)
+            value, removed = estimate(S, Lc, K)
+            errs.append(value - Q)
+            dropped += removed
         rmse = float(np.sqrt(np.mean(np.square(errs))))
         out.append((N, K, Q, rmse))
-        print("  m=%.2f N=%4d K=%2d  Q=%.4f  rmse=%.4f" % (m_s, N, K, Q, rmse))
+        print("  m=%.2f N=%4d K=%2d  Q=%.4f  rmse=%.4f  smallest reference occupation=%.3f  dropped cells=%d" % (m_s, N, K, Q, rmse, K * K * Lref.mean(0).min(), dropped))
     slope = np.polyfit(np.log([o[0] for o in out]), np.log([o[3] for o in out]), 1)[0]
     print("  m=%.2f fitted slope %.3f" % (m_s, slope))
