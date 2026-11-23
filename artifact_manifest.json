@@ -2,6 +2,16 @@
   "release": "2.1",
   "artifacts": [
     {
+      "path": "reference_outputs/empirical/bootstrap_subjects.json",
+      "size_bytes": 2893,
+      "sha256": "f94a84cefabdd3ed4126d46c99f87055defccbeef55891bdc76a4f71abf93134"
+    },
+    {
+      "path": "reference_outputs/empirical/bootstrap_subjects_replicates.csv",
+      "size_bytes": 423027,
+      "sha256": "7fb451cf8b8ea9b397161b42a93ad08ea027e2e7020fea42eeae6b5dc3910996"
+    },
+    {
       "path": "reference_outputs/empirical/crossfit_mixtures.csv",
       "size_bytes": 1951,
       "sha256": "d1ab0c53131e623dcc1fa46701e62ec03601336d63b42a5bd18eb8aa63ca2fe4"
@@ -17,9 +27,24 @@
       "sha256": "7e345a1e5f7ba76b8efd0b74ffc9b85bd970ea2fa3820d2b603158ec68620ac2"
     },
     {
+      "path": "reference_outputs/empirical/leave_one_game_out.csv",
+      "size_bytes": 1383,
+      "sha256": "8e561ebf0de29af7b23c291f2a34cca2d71ef6da83081d3dfb8a043332277417"
+    },
+    {
       "path": "reference_outputs/empirical/mle_pooled.json",
       "size_bytes": 399,
       "sha256": "18280b4508c4bac6f6f45e0dea0bd4285d8e90623fa522f455507bfe53cdb24b"
+    },
+    {
+      "path": "reference_outputs/empirical/out_of_fold_information.json",
+      "size_bytes": 13073,
+      "sha256": "0444927185e12cd1a90dd215f6faa7ff90f9e4db4749272a7203e942d850657a"
+    },
+    {
+      "path": "reference_outputs/empirical/out_of_fold_information_games.csv",
+      "size_bytes": 2768,
+      "sha256": "1bd5639b2af9b56859b59578ef97e4c3071165132bac983984d365cfae08059f"
     },
     {
       "path": "reference_outputs/empirical/process_tracing_crossfit.json",

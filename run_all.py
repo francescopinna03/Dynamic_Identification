@@ -51,6 +51,11 @@ def main(argv=None) -> int:
              "--output-dir", str(output / "empirical"),
              "--n-perm", str(args.n_perm),
              "--seed", str(args.seed)], root)
+        run([python, str(empirical / "leave_one_game_out.py"),
+             "--root", str(root)], root)
+        run([python, str(empirical / "out_of_fold_information.py"),
+             "--root", str(root),
+             "--output-dir", str(output / "empirical")], root)
 
     if not args.skip_theoretical:
         run([python, str(theoretical / "design_games.py"),
