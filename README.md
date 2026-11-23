@@ -10,8 +10,12 @@ The results of the first version of the paper (August 2026) were produced at
 tag
 [`v1.0`](https://github.com/francescopinna03/Dynamic_Identification/tree/v1.0).
 The revised version (November 2026) leaves those results unchanged and adds
-the verification scripts for its new sections, at tag
-[`v2.0`](https://github.com/francescopinna03/Dynamic_Identification/tree/v2.0).
+the verification scripts for its new sections, the subject bootstrap, the
+out-of-fold evaluation, and the leave-one-game-out table, at tag
+[`v2.1`](https://github.com/francescopinna03/Dynamic_Identification/tree/v2.1).
+Tag
+[`v2.0`](https://github.com/francescopinna03/Dynamic_Identification/tree/v2.0)
+is an earlier snapshot of the same revision and is superseded by `v2.1`.
 Later commits on `main` may refine documentation without changing those
 results.
 
@@ -56,7 +60,21 @@ python run_all.py --skip-download
 The last stage of `run_all.py` runs four verification scripts and writes their
 transcripts to `output/verification/`. It requires CVXPY with the Clarabel
 solver, both pinned in `requirements.txt`, and can be skipped with
-`--skip-verification`.
+`--skip-verification`. During the coverage experiment of
+`verify_identified_sets.py` CVXPY may warn that a solution may be inaccurate.
+The script counts those solves and prints the count in its transcript.
+
+The subject bootstrap is not part of `run_all.py`, because it recomputes the
+whole empirical chain on each of 1,999 resamples of the subjects. After a full
+run it is launched separately:
+
+```bash
+python code/empirical/bootstrap_subjects.py --root .
+```
+
+It runs under seed 42 on all cores but one unless `--workers` is given, and
+writes `bootstrap_subjects.json` and `bootstrap_subjects_replicates.csv` to
+`output/empirical/`.
 
 Python version: see `.python-version`. Pinned library versions: see
 `requirements.txt` and `environment.json`, which records the interpreter and
@@ -65,9 +83,12 @@ residuals reach the order of 1e-15, so results at the last digits are sensitive
 to the linear-algebra backend, and `environment.json` is what makes a
 discrepancy diagnosable. The verification transcripts were produced under
 Python 3.14.0 on Linux x86-64 with the pinned versions, recorded in the
-`verification` entry of `environment.json`.
+`verification` entry of `environment.json`. The stored bootstrap and
+out-of-fold outputs were produced on macOS arm64. A run of the out-of-fold
+evaluation and of the first 399 bootstrap replicates on Linux x86-64 agrees
+with them within 3e-5.
 
-Approximate runtime: Observed runtime on a MacBook Air with an Apple M2 processor and 8 GB of memory, using macOS 26.5.2 and Python 3.14.0: 1 minute 40.45 seconds for a fresh run including data acquisition, and 1 minute 4.77 seconds with the archives already downloaded (`--skip-download`). Environment creation and dependency installation are excluded. These timings predate the verification stage and correspond to `--skip-verification`. That stage took about two and a half minutes on a Linux x86-64 machine.
+Approximate runtime: Observed runtime on a MacBook Air with an Apple M2 processor and 8 GB of memory, using macOS 26.5.2 and Python 3.14.0: 1 minute 40.45 seconds for a fresh run including data acquisition, and 1 minute 4.77 seconds with the archives already downloaded (`--skip-download`). Environment creation and dependency installation are excluded. These timings predate the verification stage and the two stages that follow the cross-fitted analysis, the leave-one-game-out table and the out-of-fold evaluation, and correspond to `--skip-verification`. On a Linux x86-64 machine the out-of-fold evaluation took about twenty seconds, the verification stage about five minutes, and one bootstrap replicate under twenty seconds on one core.
 
 ## Layout
 
@@ -78,16 +99,17 @@ code/theoretical/        finite-grid Wright-Fisher / Schrodinger-Bass bridge,
                          verification scripts of the revised version
 code/empirical/          acquisition, preprocessing, pooled estimation,
                          cross-fitted classification, leave-one-game-out
-                         scoring, permutations, MouseLab process contrasts
+                         scoring, permutations, MouseLab process contrasts,
+                         subject bootstrap, out-of-fold evaluation
 code/tests/              self-tests (leakage, perfect-signal auction limit,
                          per-subject Fisher accounting)
 code/data_manifest.json  hashes and dimensions of the source archives and of
                          the reconstructed data
 code/verify_data_manifest.py
                          checks the data against that manifest
-artifact_manifest.json   hashes of the 21 stored reference outputs
+artifact_manifest.json   hashes of the 26 stored reference outputs
 environment.json         interpreter and library versions used for the paper
-output/                  results produced by a full run
+output/                  results produced by a full run and by the bootstrap
 reference_outputs/       the same results as reported in the paper
 ```
 
@@ -98,22 +120,25 @@ paper.
 
 | Paper result | Produced by | Reported artifact |
 | --- | --- | --- |
-| Table 1, regular / active-face / game-anchored bridges | `code/theoretical/conditional_wf_sbb.py`, `code/theoretical/robustness_wf_sbb.py` | `output/robustness_wf_sbb.json`, `.csv` |
-| Table 2, mesh and time robustness | `code/theoretical/robustness_wf_sbb.py` | `output/robustness_wf_sbb.csv` |
-| Table 3, log-domain path and information decomposition | `code/theoretical/log_domain_boundary_layer.py`, `code/theoretical/central_path_transition.py` | `output/log_domain_boundary_layer.json`, `output/log_domain_information_path.csv`, `output/central_path_transition.json` |
-| Tables 4, 5, 6 and 12, design audit, battery progression, primitive slices, parameter landscape | `code/theoretical/design_games.py`, `code/theoretical/auction.py` | `reference_outputs/theoretical/design_games.json` |
-| Table 7, sample sizes | `code/theoretical/sample_size.py` | `reference_outputs/theoretical/design_games.json` |
-| Tables 8 and 13, efficient endpoint information for depth | `code/empirical/fisher_cgc.py` | `reference_outputs/empirical/fisher_diagnostics.csv` |
-| Table 9, cross-fitted sorting | `code/empirical/classify_subjects_crossfit.py`, `code/empirical/stratified_cv.py`, `code/empirical/robustness.py` | `reference_outputs/empirical/stratified_cv_crossfit.csv`, `subject_types_crossfit.csv`, `robustness.txt` |
-| Table 10, MouseLab process contrasts | `code/empirical/process_tracing_crossfit.py` | `reference_outputs/empirical/process_tracing_crossfit_games.csv`, `process_tracing_crossfit.json` |
-| Section 15.2, pooled maximum likelihood | `code/empirical/mle_cgc.py` | `reference_outputs/empirical/mle_pooled.json` |
+| Tables 1, 11, 12 and 13, design audit, battery progression, primitive slices, parameter landscape | `code/theoretical/design_games.py`, `code/theoretical/auction.py` | `reference_outputs/theoretical/design_games.json` |
+| Table 2, sample sizes | `code/theoretical/sample_size.py` | `reference_outputs/theoretical/design_games.json` |
+| Table 3, regular / active-face / game-anchored bridges | `code/theoretical/conditional_wf_sbb.py`, `code/theoretical/robustness_wf_sbb.py` | `output/robustness_wf_sbb.json`, `.csv` |
+| Tables 4 and 14, efficient endpoint information for depth | `code/empirical/fisher_cgc.py` | `reference_outputs/empirical/fisher_diagnostics.csv` |
+| Table 5, cross-fitted sorting | `code/empirical/classify_subjects_crossfit.py`, `code/empirical/stratified_cv.py`, `code/empirical/robustness.py` | `reference_outputs/empirical/stratified_cv_crossfit.csv`, `subject_types_crossfit.csv`, `robustness.txt` |
+| Table 5, subject bootstrap intervals and shares of nonpositive slopes | `code/empirical/bootstrap_subjects.py` | `reference_outputs/empirical/bootstrap_subjects.json`, `bootstrap_subjects_replicates.csv` |
+| Table 5, out-of-fold slopes | `code/empirical/out_of_fold_information.py` | `reference_outputs/empirical/out_of_fold_information.json`, `out_of_fold_information_games.csv` |
+| Table 6, leave-one-game-out slopes, with the slopes of Table 5 that omit game 1 | `code/empirical/leave_one_game_out.py` | `reference_outputs/empirical/leave_one_game_out.csv` |
+| Table 7, MouseLab process contrasts | `code/empirical/process_tracing_crossfit.py` | `reference_outputs/empirical/process_tracing_crossfit_games.csv`, `process_tracing_crossfit.json` |
+| Table 9, mesh and time robustness | `code/theoretical/robustness_wf_sbb.py` | `output/robustness_wf_sbb.csv` |
+| Table 10, log-domain path and information decomposition | `code/theoretical/log_domain_boundary_layer.py`, `code/theoretical/central_path_transition.py` | `output/log_domain_boundary_layer.json`, `output/log_domain_information_path.csv`, `output/central_path_transition.json` |
+| Section 7.2, pooled maximum likelihood | `code/empirical/mle_cgc.py` | `reference_outputs/empirical/mle_pooled.json` |
 | Numerical checks of the theorem identities | `code/theoretical/verify_math.py` | `reference_outputs/theoretical/math_checks.json` |
-| Section 7, two-scale expansion, local limit, Bures and Fisher-Rao forms, shadow price | `code/theoretical/verify_two_scale.py` | `reference_outputs/verification/verify_two_scale.txt` |
-| Sections 4.3, 5, 7, 10.1, 13.2 and 14.4, causal counterexample, budget interval, quadrature term, innovation energy, depth variance, sender-receiver determinant, reservation-price identities | `code/theoretical/verify_revision_checks.py` | `reference_outputs/verification/verify_revision_checks.txt` |
-| Sections 10.2 and 12 and Appendix C, efficient information under nested correction classes, intervention information, budgeted instance, coverage, boundary information, elbow exponents | `code/theoretical/verify_identified_sets.py` | `reference_outputs/verification/verify_identified_sets.txt` |
-| Appendix D, occupation moments and split-sample estimator | `code/theoretical/verify_repeated_paths.py` | `reference_outputs/verification/verify_repeated_paths.txt` |
+| Appendix D, two-scale expansion, local limit, Bures and Fisher-Rao forms, shadow price | `code/theoretical/verify_two_scale.py` | `reference_outputs/verification/verify_two_scale.txt` |
+| Sections 2.2, 3.1, 3.2 and 5.2 and Appendices B and D, causal counterexample, budget interval, quadrature term, innovation energy, depth variance, sender-receiver determinant, reservation-price identities | `code/theoretical/verify_revision_checks.py` | `reference_outputs/verification/verify_revision_checks.txt` |
+| Sections 3.3 and 4 and Appendix G, efficient information under nested correction classes, intervention information, budgeted instance, coverage, boundary information, elbow exponents | `code/theoretical/verify_identified_sets.py` | `reference_outputs/verification/verify_identified_sets.txt` |
+| Appendix G, occupation moments and split-sample estimator | `code/theoretical/verify_repeated_paths.py` | `reference_outputs/verification/verify_repeated_paths.txt` |
 
-Table 11 is a conceptual mapping of channels to measurements and has no
+Table 8 is a conceptual mapping of channels to measurements and has no
 computational counterpart.
 
 ## What the audits certify
@@ -137,8 +162,16 @@ revealing signal makes conditional auction cursing collapse to the correct
 conditional law, and the sample-size routine sums per-subject Fisher matrices
 without any later division by the number of games.
 
+The mutation test holds fixed the precision at which the type likelihoods are
+evaluated, which in the reported analysis is the estimate obtained on all
+sixteen games, so that it certifies the absence of own-outcome leakage at a
+given precision. `out_of_fold_information.py` replaces that precision, and the
+point at which the information of each game is evaluated, by the estimates
+obtained without the game, and reports the resulting slopes together with the
+number of classifications that change.
+
 The verification scripts print, under fixed seeds, the figures quoted in
-Sections 7, 10, 12 and 14.4 and in Appendices C and D: the expansion of the
+Sections 3 and 4 and in Appendices D and G: the expansion of the
 sampled Gaussian entropy and its local limit, the budget interval, the
 identities of the reservation-price module, the profiled cost, the identified
 set, and the boundary information of the budgeted instance with its Monte
